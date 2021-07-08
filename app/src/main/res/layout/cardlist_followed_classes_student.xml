@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="12dp"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layoutDirection="rtl"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <TextView
+            android:id="@+id/textview_cardlist_main_student_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:gravity="center"
+            android:text="@string/text_cardlist_followed_student_textview_title"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textview_cardlist_followed_student_department"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="@string/text_cardlist_followed_student_textview_department"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textview_cardlist_followed_student_teacher_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="@string/text_cardlist_followed_student_textview_teacher_name"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textview_cardlist_followed_student_university"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="@string/text_cardlist_followed_student_textview_university_name"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/button_cardlist_followed_student_delete_lesson"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_cardlist_followed_student_button_delete_lesson"
+                android:textSize="16sp" />
+
+            <Space
+                android:layout_width="12dp"
+                android:layout_height="match_parent"
+                />
+
+            <Button
+                android:id="@+id/button_cardlist_main_student_goto_details_page"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_cardlist_main_student_button_goto_details_page"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

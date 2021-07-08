@@ -1,0 +1,90 @@
+<resources>
+    <!-- application name -->
+    <string name="app_name">آنی کلاس</string>
+    <!-- navigationdrawer main texts -->
+    <string name="text_main_navigationdrawer_item_login">ورود</string>
+    <string name="text_main_navigationdrawer_item_signup_student">ثبت نام دانشجو</string>
+    <string name="text_main_navigationdrawer_item_signup_teacher">ثبت نام استاد</string>
+    <!-- navigationdrawer student texts -->
+    <string name="text_student_navigationdrawer_item_main">صفحه اصلی</string>
+    <string name="text_student_navigationdrawer_item_classes_followed">کلاس های دنبال شده</string>
+    <string name="text_student_navigationdrawer_item_setting">تنظیمات</string>
+    <string name="text_student_navigationdrawer_item_exit">خروج</string>
+    <!-- navigationdrawer teacher texts -->
+    <string name="text_teacher_navigationdrawer_item_main">صفحه اصلی</string>
+    <string name="text_teacher_navigationdrawer_item_create_new_class">ساخت کلاس جدید</string>
+    <string name="text_teacher_navigationdrawer_item_management_class">مدیریت کلاس ها</string>
+    <string name="text_teacher_navigationdrawer_item_setting">تنظیمات</string>
+    <string name="text_teacher_navigationdrawer_item_exit">خروج</string>
+    <!-- login page texts -->
+    <string name="text_login_title_toolbar">ورود</string>
+    <string name="text_login_textview_nationalcode">کد ملی</string>
+    <string name="text_login_textview_password">رمز عبور</string>
+    <string name="text_login_checkbox_is_teacher">استاد هستم</string>
+    <string name="text_login_checkbox_show_password">نمایش رمز عبور</string>
+    <string name="text_login_button_login">ورود</string>
+    <string name="text_login_textview_signup_student">ثبت نام دانشجو</string>
+    <string name="text_login_textview_signup_teacher">ثبت نام استاد</string>
+    <!-- signup student page texts -->
+    <string name="text_signup_student_title_toolbar">ثبت نام دانشجو</string>
+    <string name="text_signup_student_textview_name">نام</string>
+    <string name="text_signup_student_textview_family">نام خانوادگی</string>
+    <string name="text_signup_student_textview_email">ایمیل</string>
+    <string name="text_signup_student_textview_nationalcode">کد ملی</string>
+    <string name="text_signup_student_textview_password">رمز عبور</string>
+    <string name="text_signup_student_textview_confirm_password">تکرار رمز عبور</string>
+    <string name="text_signup_student_button_signup">ثبت نام</string>
+    <string name="text_signup_student_textview_login">ثبت نام هستم</string>
+    <!-- signup teacher page texts -->
+    <string name="text_signup_teacher_title_toolbar">ثبت نام استاد</string>
+    <string name="text_signup_teacher_textview_register_code">کد ثبت نام</string>
+    <string name="text_signup_teacher_button_search_register_code">بررسی</string>
+    <string name="text_signup_teacher_textview_name">نام</string>
+    <string name="text_signup_teacher_textview_family">نام خانوادگی</string>
+    <string name="text_signup_teacher_textview_email">ایمیل</string>
+    <string name="text_signup_teacher_textview_nationalcode">کد ملی</string>
+    <string name="text_signup_teacher_textview_password">رمز عبور</string>
+    <string name="text_signup_teacher_textview_confirm_password">تکرار رمز عبور</string>
+    <string name="text_signup_teacher_button_signup">ثبت نام</string>
+    <string name="text_signup_teacher_textview_login">ثبت نام هستم</string>
+    <!-- card list main student texts -->
+    <string name="text_cardlist_main_student_textview_title">عنوان جلسه</string>
+    <string name="text_cardlist_main_student_textview_department">دپارتمان درسی</string>
+    <string name="text_cardlist_main_student_textview_teacher_name">نام استاد</string>
+    <string name="text_cardlist_main_student_textview_university_name">نام دانشگاه</string>
+    <string name="text_cardlist_main_student_button_goto_details_page">ورود به جلسه</string>
+    <!-- card list followed student texts -->
+    <string name="text_cardlist_followed_student_textview_title">عنوان جلسه</string>
+    <string name="text_cardlist_followed_student_textview_department">دپارتمان درسی</string>
+    <string name="text_cardlist_followed_student_textview_teacher_name">نام استاد</string>
+    <string name="text_cardlist_followed_student_textview_university_name">نام دانشگاه</string>
+    <string name="text_cardlist_followed_student_button_goto_details_page">ورود به جلسه</string>
+    <string name="text_cardlist_followed_student_button_delete_lesson">پاک کردن</string>
+    <!-- main student page texts -->
+    <string name="text_main_student_title_toolbar">صفحه اصلی</string>
+    <string name="text_main_student_edittext_hint_search">جستجو کنید</string>
+    <!-- followed student page texts -->
+    <string name="text_followed_student_title_toolbar">کلاس های دنبال شده</string>
+    <!-- followed student page texts -->
+    <string name="text_setting_student_title_toolbar">تنظیمات</string>
+    <string name="text_setting_student_textview_old_name">نام فعلی</string>
+    <string name="text_setting_student_textview_new_name">نام جدید</string>
+    <string name="text_setting_student_textview_old_family">نام خانوادگی فعلی</string>
+    <string name="text_setting_student_textview_new_family">نام خانوادگی جدید</string>
+    <string name="text_setting_student_button_apply_change_name_family">تغییر مشخصات</string>
+    <string name="text_setting_student_textview_old_email">ایمیل فعلی</string>
+    <string name="text_setting_student_textview_new_email">ایمیل جدید</string>
+    <string name="text_setting_student_button_apply_change_email">تغییر ایمیل</string>
+    <string name="text_setting_student_textview_old_nationalcode">کدملی فعلی</string>
+    <string name="text_setting_student_textview_new_nationalcode">کدملی جدید</string>
+    <string name="text_setting_student_button_apply_change_nationalcode">تغییر کدملی</string>
+    <string name="text_setting_student_textview_old_password">رمز عبور فعلی</string>
+    <string name="text_setting_student_textview_new_password">رمز عبور جدید</string>
+    <string name="text_setting_student_textview_confirm_new_password">تکرار رمز عبور جدید</string>
+    <string name="text_setting_student_button_apply_change_password">تغییر رمز عبور</string>
+
+
+    <!-- main teacher page texts -->
+
+
+</resources>

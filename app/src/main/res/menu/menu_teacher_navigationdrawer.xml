@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/item_menu_teacher_main"
+            android:icon="@drawable/ic_round_folder_main"
+            android:title="@string/text_teacher_navigationdrawer_item_main" />
+        <item
+            android:id="@+id/item_menu_teacher_create_new_class"
+            android:icon="@drawable/ic_round_add_folder"
+            android:title="@string/text_teacher_navigationdrawer_item_create_new_class" />
+        <item
+            android:id="@+id/item_menu_teacher_management_class"
+            android:icon="@drawable/ic_round_folder_management"
+            android:title="@string/text_teacher_navigationdrawer_item_management_class" />
+        <item
+            android:id="@+id/item_menu_teacher_setting"
+            android:icon="@drawable/ic_round_settings"
+            android:title="@string/text_teacher_navigationdrawer_item_setting" />
+        <item
+            android:id="@+id/item_menu_teacher_exit"
+            android:icon="@drawable/ic_round_power"
+            android:title="@string/text_teacher_navigationdrawer_item_exit" />
+    </group>
+</menu>
