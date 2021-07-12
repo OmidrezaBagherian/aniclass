@@ -1,11 +1,5 @@
 package ir.omidrezabagherian.aniclass;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-import androidx.drawerlayout.widget.DrawerLayout;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Gravity;
@@ -15,7 +9,13 @@ import android.widget.EditText;
 
 import com.google.android.material.navigation.NavigationView;
 
-public class SettingActivity extends AppCompatActivity {
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.drawerlayout.widget.DrawerLayout;
+
+public class SettingStudentActivity extends AppCompatActivity {
 
     private Toolbar toolbarSetting;
     private DrawerLayout drawerLayoutSetting;
@@ -26,7 +26,7 @@ public class SettingActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_setting);
+        setContentView(R.layout.activity_setting_student);
 
         toolbarSetting = (Toolbar) findViewById(R.id.toolbar_setting);
         drawerLayoutSetting = (DrawerLayout) findViewById(R.id.drawerlayout_setting);
@@ -58,11 +58,11 @@ public class SettingActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
                     case R.id.item_menu_student_main:
-                        Intent goToMain = new Intent(SettingActivity.this, MainStudentActivity.class);
+                        Intent goToMain = new Intent(SettingStudentActivity.this, MainStudentActivity.class);
                         startActivity(goToMain);
                         break;
                     case R.id.item_menu_student_class_saved:
-                        Intent goToFollowed = new Intent(SettingActivity.this, FollowedStudentActivity.class);
+                        Intent goToFollowed = new Intent(SettingStudentActivity.this, FollowedStudentActivity.class);
                         startActivity(goToFollowed);
                         break;
                     case R.id.item_menu_student_setting:

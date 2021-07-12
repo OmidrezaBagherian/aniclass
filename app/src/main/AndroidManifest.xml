@@ -11,17 +11,17 @@
         android:theme="@style/Theme.AniClass">
         <activity android:name=".SettingStudentActivity"></activity>
         <activity android:name=".FollowedStudentActivity" />
-        <activity android:name=".MainTeacherActivity" />
         <activity android:name=".MainStudentActivity">
+        </activity>
+        <activity android:name=".SignupTeacherActivity" />
+        <activity android:name=".SignupStudentActivity" />
+        <activity android:name=".LoginActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SignupTeacherActivity" />
-        <activity android:name=".SignupStudentActivity" />
-        <activity android:name=".LoginActivity" />
     </application>
 
 </manifest>
