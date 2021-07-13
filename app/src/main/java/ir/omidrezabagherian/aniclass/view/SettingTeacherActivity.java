@@ -1,6 +1,7 @@
-package ir.omidrezabagherian.aniclass;
+package ir.omidrezabagherian.aniclass.view;
 
 import androidx.appcompat.app.AppCompatActivity;
+import ir.omidrezabagherian.aniclass.R;
 
 import android.os.Bundle;
 

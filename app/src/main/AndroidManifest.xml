@@ -9,13 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AniClass">
-        <activity android:name=".SettingStudentActivity"></activity>
-        <activity android:name=".FollowedStudentActivity" />
-        <activity android:name=".MainStudentActivity">
+        <activity android:name=".view.SettingStudentActivity"></activity>
+        <activity android:name=".view.FollowedStudentActivity" />
+        <activity android:name=".view.MainStudentActivity">
         </activity>
-        <activity android:name=".SignupTeacherActivity" />
-        <activity android:name=".SignupStudentActivity" />
-        <activity android:name=".LoginActivity" >
+        <activity android:name=".view.SignupTeacherActivity" />
+        <activity android:name=".view.SignupStudentActivity" />
+        <activity android:name=".view.LoginActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

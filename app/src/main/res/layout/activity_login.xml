@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     android:layoutDirection="rtl"
-    tools:context=".LoginActivity">
+    tools:context=".view.LoginActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintlayout_login"
