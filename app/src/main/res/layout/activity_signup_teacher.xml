@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/drawerlayout_signup_teacher"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layoutDirection="rtl"
@@ -76,6 +75,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/button_signup_teacher_search_register_code" />
 
                 <EditText
+                    android:enabled="false"
                     android:id="@+id/edittext_signup_teacher_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -98,6 +98,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/edittext_signup_teacher_name" />
 
                 <EditText
+                    android:enabled="false"
                     android:id="@+id/edittext_signup_teacher_family"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -120,6 +121,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/edittext_signup_teacher_family" />
 
                 <EditText
+                    android:enabled="false"
                     android:id="@+id/edittext_signup_teacher_email"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -142,6 +144,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/edittext_signup_teacher_email" />
 
                 <EditText
+                    android:enabled="false"
                     android:id="@+id/edittext_signup_teacher_nationalcode"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -154,7 +157,6 @@
 
                 <TextView
                     android:layout_marginTop="12dp"
-
                     android:id="@+id/textview_signup_teacher_password"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -165,6 +167,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/edittext_signup_teacher_nationalcode" />
 
                 <EditText
+                    android:enabled="false"
                     android:id="@+id/edittext_signup_teacher_password"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -187,6 +190,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/edittext_signup_teacher_password" />
 
                 <EditText
+                    android:enabled="false"
                     android:id="@+id/edittext_signup_teacher_confirm_password"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -207,30 +211,10 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/edittext_signup_teacher_confirm_password" />
 
-                <TextView
-                    android:id="@+id/textview_signup_teacher_login"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:text="@string/text_signup_teacher_textview_login"
-                    android:textSize="18sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/button_signup_teacher_signup" />
-
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </ScrollView>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <com.google.android.material.navigation.NavigationView
-        android:id="@+id/navigationview_signup_teacher"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_gravity="right"
-        android:fitsSystemWindows="true"
-        app:headerLayout="@layout/header_app_navigationdrawer"
-        app:menu="@menu/menu_main_navigationdrawer" />
-
-</androidx.drawerlayout.widget.DrawerLayout>
+</RelativeLayout>
