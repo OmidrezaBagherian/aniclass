@@ -2,43 +2,42 @@
 <androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/drawerlayout_followed_student"
+    android:id="@+id/drawerlayout_management_teacher"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layoutDirection="rtl"
     tools:context=".view.ManagementTeacherActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintlayout_followed_student"
+        android:id="@+id/constraintlayout_management_teacher"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar_followed_student"
+            android:id="@+id/toolbar_management_teacher"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerview_followed_class_student_classes"
+            android:id="@+id/recyclerview_management_teacher_classes"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/toolbar_followed_student" />
+            app:layout_constraintTop_toBottomOf="@+id/toolbar_management_teacher" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <com.google.android.material.navigation.NavigationView
-        android:id="@+id/navigationview_followed_student"
+        android:id="@+id/navigationview_management_teacher"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="right"
         android:fitsSystemWindows="true"
         app:headerLayout="@layout/header_app_navigationdrawer"
-        app:menu="@menu/menu_student_navigationdrawer" />
+        app:menu="@menu/menu_teacher_navigationdrawer" />
 
 </androidx.drawerlayout.widget.DrawerLayout>

@@ -37,7 +37,7 @@ public class SignupStudentActivity extends AppCompatActivity {
         editTextSignupStudentConfirmPassword = (EditText) findViewById(R.id.edittext_signup_student_confirm_password);
         buttonSignupStudentSignUp = (Button) findViewById(R.id.button_signup_student_signup);
 
-        toolbarSignupStudent.setTitle(R.string.text_signup_teacher_title_toolbar);
+        toolbarSignupStudent.setTitle(R.string.text_signup_student_title_toolbar);
         setSupportActionBar(toolbarSignupStudent);
 
     }

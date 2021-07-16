@@ -2,10 +2,6 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/item_menu_teacher_main"
-            android:icon="@drawable/ic_round_folder_main"
-            android:title="@string/text_teacher_navigationdrawer_item_main" />
-        <item
             android:id="@+id/item_menu_teacher_create_new_class"
             android:icon="@drawable/ic_round_add_folder"
             android:title="@string/text_teacher_navigationdrawer_item_create_new_class" />

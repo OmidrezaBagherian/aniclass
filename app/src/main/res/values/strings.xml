@@ -47,19 +47,6 @@
     <string name="text_signup_teacher_textview_confirm_password">تکرار رمز عبور</string>
     <string name="text_signup_teacher_button_signup">ثبت نام</string>
     <string name="text_signup_teacher_textview_login">ثبت نام هستم</string>
-    <!-- card list main student texts -->
-    <string name="text_cardlist_main_student_textview_title">عنوان جلسه</string>
-    <string name="text_cardlist_main_student_textview_department">دپارتمان درسی</string>
-    <string name="text_cardlist_main_student_textview_teacher_name">نام استاد</string>
-    <string name="text_cardlist_main_student_textview_university_name">نام دانشگاه</string>
-    <string name="text_cardlist_main_student_button_goto_details_page">ورود به جلسه</string>
-    <!-- card list followed student texts -->
-    <string name="text_cardlist_followed_student_textview_title">عنوان جلسه</string>
-    <string name="text_cardlist_followed_student_textview_department">دپارتمان درسی</string>
-    <string name="text_cardlist_followed_student_textview_teacher_name">نام استاد</string>
-    <string name="text_cardlist_followed_student_textview_university_name">نام دانشگاه</string>
-    <string name="text_cardlist_followed_student_button_goto_details_page">ورود به جلسه</string>
-    <string name="text_cardlist_followed_student_button_delete_lesson">پاک کردن</string>
     <!-- main student page texts -->
     <string name="text_main_student_title_toolbar">صفحه اصلی</string>
     <string name="text_main_student_edittext_hint_search">جستجو کنید</string>
@@ -67,6 +54,7 @@
     <string name="text_followed_student_title_toolbar">کلاس های دنبال شده</string>
     <!-- followed student page texts -->
     <string name="text_setting_student_title_toolbar">تنظیمات</string>
+    <string name="text_setting_teacher_title_toolbar">تنظیمات</string>
     <string name="text_setting_student_textview_old_name">نام فعلی</string>
     <string name="text_setting_student_textview_new_name">نام جدید</string>
     <string name="text_setting_student_textview_old_family">نام خانوادگی فعلی</string>
@@ -82,9 +70,50 @@
     <string name="text_setting_student_textview_new_password">رمز عبور جدید</string>
     <string name="text_setting_student_textview_confirm_new_password">تکرار رمز عبور جدید</string>
     <string name="text_setting_student_button_apply_change_password">تغییر رمز عبور</string>
-
-
-    <!-- main teacher page texts -->
-
+    <!-- create class teacher page texts -->
+    <string name="text_create_class_teacher_title_toolbar">ایجاد کلاس</string>
+    <string name="text_create_class_teacher_textview_title_lesson">نام درس</string>
+    <string name="text_create_class_teacher_textview_code_lesson">کد درس</string>
+    <string name="text_create_class_teacher_textview_capacity">ظرفیت</string>
+    <string name="text_create_class_teacher_textview_link">لینک</string>
+    <string name="text_create_class_teacher_textview_department">دپارتمان</string>
+    <string name="text_create_class_teacher_textview_university">دانشگاه</string>
+    <string name="text_create_class_teacher_textview_about">توضیحات</string>
+    <string name="text_create_class_teacher_button_create_class">ایجاد کلاس</string>
+    <!-- management student page texts -->
+    <string name="text_management_student_title_toolbar">مدیریت کلاس ها</string>
+    <!-- detail class texts-->
+    <string name="text_detail_class_title_toolbar">جزئیات کلاس</string>
+    <string name="text_detail_class_title_textview_title_lesson">عنوان جلسه</string>
+    <string name="text_detail_class_title_textview_code_lesson">کد درس</string>
+    <string name="text_detail_class_title_textview_teacher_name">نام استاد</string>
+    <string name="text_detail_class_title_textview_department">دپارتمان</string>
+    <string name="text_detail_class_title_textview_about">توضیحات</string>
+    <string name="text_detail_class_title_textview_link">لینک جلسات</string>
+    <!-- card list main student texts -->
+    <string name="text_cardlist_main_student_textview_title">عنوان جلسه</string>
+    <string name="text_cardlist_main_student_textview_department">دپارتمان درسی</string>
+    <string name="text_cardlist_main_student_textview_teacher_name">نام استاد</string>
+    <string name="text_cardlist_main_student_textview_university_name">نام دانشگاه</string>
+    <string name="text_cardlist_main_student_button_goto_details_page">ورود به جلسه</string>
+    <!-- card list followed student texts -->
+    <string name="text_cardlist_followed_student_textview_title">عنوان جلسه</string>
+    <string name="text_cardlist_followed_student_textview_department">دپارتمان درسی</string>
+    <string name="text_cardlist_followed_student_textview_teacher_name">نام استاد</string>
+    <string name="text_cardlist_followed_student_textview_university_name">نام دانشگاه</string>
+    <string name="text_cardlist_followed_student_button_goto_details_page">ورود به جلسه</string>
+    <string name="text_cardlist_followed_student_button_delete_lesson">پاک کردن</string>
+    <!-- card list management teacher texts -->
+    <string name="text_cardlist_management_teacher_textview_title_lesson">عنوان جلسه</string>
+    <string name="text_cardlist_management_teacher_textview_department">دپارتمان درسی</string>
+    <string name="text_cardlist_management_teacher_textview_teacher_name">نام استاد</string>
+    <string name="text_cardlist_management_teacher_textview_university_name">نام دانشگاه</string>
+    <string name="text_cardlist_management_teacher_button_edit_class">ویرایش</string>
+    <string name="text_cardlist_management_teacher_button_delete_lesson">پاک کردن</string>
+    <!-- card list detail teacher texts -->
+    <string name="text_cardlist_detail_teacher_textview_title_lesson">عنوان جلسه</string>
+    <string name="text_cardlist_detail_teacher_textview_time">ساعت</string>
+    <string name="text_cardlist_detail_teacher_textview_date">تاریخ</string>
+    <string name="text_cardlist_detail_teacher_button_goto_class_page">ورود به جلسه</string>
 
 </resources>

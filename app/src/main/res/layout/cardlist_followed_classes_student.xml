@@ -15,7 +15,7 @@
         android:padding="12dp">
 
         <TextView
-            android:id="@+id/textview_cardlist_main_student_title"
+            android:id="@+id/textview_cardlist_followed_classes_student_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="12dp"
@@ -25,7 +25,7 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/textview_cardlist_followed_student_department"
+            android:id="@+id/textview_cardlist_followed_classes_student_department"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
@@ -33,7 +33,7 @@
             android:textSize="18sp" />
 
         <TextView
-            android:id="@+id/textview_cardlist_followed_student_teacher_name"
+            android:id="@+id/textview_cardlist_followed_classes_student_teacher_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
@@ -41,7 +41,7 @@
             android:textSize="18sp" />
 
         <TextView
-            android:id="@+id/textview_cardlist_followed_student_university"
+            android:id="@+id/textview_cardlist_followed_classes_student_university"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
@@ -55,7 +55,7 @@
             android:layout_height="wrap_content">
 
             <Button
-                android:id="@+id/button_cardlist_followed_student_delete_lesson"
+                android:id="@+id/button_cardlist_followed_classes_student_delete_lesson"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/text_cardlist_followed_student_button_delete_lesson"
@@ -67,15 +67,13 @@
                 />
 
             <Button
-                android:id="@+id/button_cardlist_main_student_goto_details_page"
+                android:id="@+id/button_cardlist_followed_classes_student_goto_details_page"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/text_cardlist_main_student_button_goto_details_page"
                 android:textSize="16sp" />
 
         </LinearLayout>
-
-
 
     </LinearLayout>
 
