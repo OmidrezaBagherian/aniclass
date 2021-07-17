@@ -19,5 +19,11 @@ public class ClassItemEntity {
   public String link;
   @ColumnInfo
   public int capacity;
+  @ColumnInfo(name = "teacher_id")
+  public int teacherId;
+  @ColumnInfo(name = "department_id")
+  public int departmentId;
+  @ColumnInfo(name = "university_id")
+  public int universityId;
 
 }
