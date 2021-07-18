@@ -1,4 +1,4 @@
-package ir.omidrezabagherian.aniclass.room.entity;
+package ir.omidrezabagherian.aniclass.local.room.entity;
 /*
 @created in 17/07/2021 - 10:05 PM
 @project AniClass

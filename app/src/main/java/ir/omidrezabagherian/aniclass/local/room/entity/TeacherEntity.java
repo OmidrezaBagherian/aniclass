@@ -1,4 +1,4 @@
-package ir.omidrezabagherian.aniclass.room.entity;
+package ir.omidrezabagherian.aniclass.local.room.entity;
 
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;

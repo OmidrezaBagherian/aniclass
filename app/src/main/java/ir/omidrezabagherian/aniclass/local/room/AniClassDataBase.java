@@ -1,4 +1,4 @@
-package ir.omidrezabagherian.aniclass.room;
+package ir.omidrezabagherian.aniclass.local.room;
 
 
 import android.content.Context;
@@ -7,11 +7,11 @@ import androidx.annotation.NonNull;
 import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
-import ir.omidrezabagherian.aniclass.room.dao.AniClassDao;
-import ir.omidrezabagherian.aniclass.room.entity.ClassItemEntity;
-import ir.omidrezabagherian.aniclass.room.entity.TeacherEntity;
-import ir.omidrezabagherian.aniclass.room.entity.UniversityEntity;
-import ir.omidrezabagherian.aniclass.room.entity.UserEntity;
+import ir.omidrezabagherian.aniclass.local.room.dao.AniClassDao;
+import ir.omidrezabagherian.aniclass.local.room.entity.ClassItemEntity;
+import ir.omidrezabagherian.aniclass.local.room.entity.TeacherEntity;
+import ir.omidrezabagherian.aniclass.local.room.entity.UniversityEntity;
+import ir.omidrezabagherian.aniclass.local.room.entity.UserEntity;
 
 @Database(entities = {
     ClassItemEntity.class,

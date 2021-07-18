@@ -1,4 +1,4 @@
-package ir.omidrezabagherian.aniclass.room.dao;
+package ir.omidrezabagherian.aniclass.local.room.dao;
 
 import java.util.List;
 
@@ -8,11 +8,12 @@ import androidx.room.Insert;
 import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
 import io.reactivex.rxjava3.core.Observable;
-import ir.omidrezabagherian.aniclass.room.entity.ClassItemEntity;
-import ir.omidrezabagherian.aniclass.room.entity.FollowEntity;
-import ir.omidrezabagherian.aniclass.room.entity.TeacherEntity;
-import ir.omidrezabagherian.aniclass.room.entity.UniversityEntity;
-import ir.omidrezabagherian.aniclass.room.entity.UserEntity;
+import io.reactivex.rxjava3.core.Single;
+import ir.omidrezabagherian.aniclass.local.room.entity.ClassItemEntity;
+import ir.omidrezabagherian.aniclass.local.room.entity.FollowEntity;
+import ir.omidrezabagherian.aniclass.local.room.entity.TeacherEntity;
+import ir.omidrezabagherian.aniclass.local.room.entity.UniversityEntity;
+import ir.omidrezabagherian.aniclass.local.room.entity.UserEntity;
 import retrofit2.http.GET;
 
 @Dao
@@ -26,6 +27,13 @@ public interface AniClassDao {
 
   @Query("SELECT * FROM follow_tb WHERE id=:followId")
   Observable<List<FollowEntity>> getFollowById(int followId);
+
+  @Query("SELECT * FROM user_tb WHERE national_code=:national_code AND password=:password")
+  Single<UserEntity> userLogin(String national_code , String password);
+  
+
+  @Query("SELECT * FROM teacher_tb WHERE national_code=:national_code AND password=:password")
+  Single<TeacherEntity> teacherLogin(String national_code , String password);
   
   @Query("SELECT * FROM teacher_tb WHERE id=:teacherId")
   Observable<TeacherEntity> getTeacherById(int teacherId);
