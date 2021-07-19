@@ -9,6 +9,7 @@ import androidx.room.Room;
 import androidx.room.RoomDatabase;
 import ir.omidrezabagherian.aniclass.local.room.dao.AniClassDao;
 import ir.omidrezabagherian.aniclass.local.room.entity.ClassItemEntity;
+import ir.omidrezabagherian.aniclass.local.room.entity.FollowEntity;
 import ir.omidrezabagherian.aniclass.local.room.entity.TeacherEntity;
 import ir.omidrezabagherian.aniclass.local.room.entity.UniversityEntity;
 import ir.omidrezabagherian.aniclass.local.room.entity.UserEntity;
@@ -17,8 +18,9 @@ import ir.omidrezabagherian.aniclass.local.room.entity.UserEntity;
     ClassItemEntity.class,
     TeacherEntity.class,
     UniversityEntity.class,
-    UserEntity.class
-}, version = 1)
+    UserEntity.class ,
+    FollowEntity.class
+}, version = 1 , exportSchema = false)
 public abstract class AniClassDataBase extends RoomDatabase {
     private static AniClassDataBase database = null;
     

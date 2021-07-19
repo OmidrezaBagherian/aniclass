@@ -1,5 +1,6 @@
 package ir.omidrezabagherian.aniclass.local.room.entity;
 
+import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
@@ -8,20 +9,28 @@ import androidx.room.PrimaryKey;
 public class TeacherEntity {
   @PrimaryKey
   public int id;
-
+  
+  @NonNull
+  @ColumnInfo(name = "national_code")
+  public String nationalCode;
+  
+  
+  @NonNull
+  @ColumnInfo
+  public String password;
+  
+  @NonNull
   @ColumnInfo
   public String name;
-
+  
+  @NonNull
+  @ColumnInfo
+  public String family;
+  
+  @NonNull
   @ColumnInfo
   public String email;
 
-  @ColumnInfo
-  public String password;
 
-  @ColumnInfo(name = "national_code")
-  public String nationalCode;
-
-  @ColumnInfo
-  public String family;
 
 }

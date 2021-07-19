@@ -6,6 +6,7 @@ package ir.omidrezabagherian.aniclass.local.room.entity;
 @email  hosseinzafari2000@gmail.com 
 */
 
+import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
@@ -15,9 +16,11 @@ public class FollowEntity {
     @PrimaryKey(autoGenerate = true)
     public int id;
  
-    @ColumnInfo(name = "teacher_id")
-    public int teacherId;
+    @NonNull
+    @ColumnInfo(name = "class_id")
+    public int classId;
  
+    @NonNull
     @ColumnInfo(name = "user_id")
     public int userId;
 }

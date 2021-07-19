@@ -14,12 +14,11 @@ import ir.omidrezabagherian.aniclass.local.room.entity.FollowEntity;
 import ir.omidrezabagherian.aniclass.local.room.entity.TeacherEntity;
 import ir.omidrezabagherian.aniclass.local.room.entity.UniversityEntity;
 import ir.omidrezabagherian.aniclass.local.room.entity.UserEntity;
-import retrofit2.http.GET;
 
 @Dao
 public interface AniClassDao {
 
-  @GET
+  @Query("SELECT * FROM class_tb")
   Observable<List<ClassItemEntity>> getAllClass();
 
   @Query("SELECT * FROM class_tb WHERE id=:classId")

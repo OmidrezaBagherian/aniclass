@@ -2,6 +2,7 @@ package ir.omidrezabagherian.aniclass.view;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
@@ -14,6 +15,7 @@ import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers;
 import io.reactivex.rxjava3.disposables.CompositeDisposable;
 import io.reactivex.rxjava3.schedulers.Schedulers;
 import ir.omidrezabagherian.aniclass.R;
+import ir.omidrezabagherian.aniclass.core.Base;
 import ir.omidrezabagherian.aniclass.local.room.AniClassDataBase;
 import ir.omidrezabagherian.aniclass.local.room.dao.AniClassDao;
 import ir.omidrezabagherian.aniclass.local.shared_pref.AniclassSharedPref;
@@ -26,7 +28,7 @@ public class LoginActivity extends AppCompatActivity {
     private Button buttonLoginLogin;
     private TextView textViewLoginSignupStudent, textViewLoginSignupTeacher;
     
-    private final AniClassDao dao = AniClassDataBase.getDatabase(getApplicationContext()).getDao();
+    private final AniClassDao dao = AniClassDataBase.getDatabase(Base.getContext()).getDao();
     private CompositeDisposable compositeDisposable = new CompositeDisposable();
     
     @Override
@@ -71,6 +73,11 @@ public class LoginActivity extends AppCompatActivity {
     
     
     private void login() {
+        if(editTextLoginNationalCode.getText().toString().isEmpty() || editTextLoginPassword.getText().toString().isEmpty()) {
+            Toast.makeText(this, "لطفا تمامی فیلد ها را پر کنید", Toast.LENGTH_LONG).show();
+            return;
+        }
+        
         if (checkBoxLoginIsTeacher.isChecked()) { // teacher login
             compositeDisposable.add(
                 dao.teacherLogin(editTextLoginNationalCode.getText().toString().trim(), editTextLoginPassword.getText().toString().trim()
@@ -91,7 +98,8 @@ public class LoginActivity extends AppCompatActivity {
                         AniclassSharedPref.login(user);
                         goMainStudentActivity();
                     }, throwable -> {
-                        Toast.makeText(this, "اطلاعات کاربری شما اشتباه است!", Toast.LENGTH_LONG).show();
+                        Log.i("Text" , "Error: " + throwable.getMessage());
+//                        Toast.makeText(this, "اطلاعات کاربری شما اشتباه است!", Toast.LENGTH_LONG).show();
                     }));
         }
     }
