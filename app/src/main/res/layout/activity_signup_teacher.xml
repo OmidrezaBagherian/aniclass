@@ -23,7 +23,6 @@
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingBottom="80dp"
             android:layout_marginTop="8dp"
             app:layout_constraintTop_toBottomOf="@+id/toolbar_signup_teacher">
 
@@ -45,6 +44,7 @@
                 <EditText
                     android:id="@+id/edittext_signup_teacher_register_code"
                     android:layout_width="match_parent"
+                    android:gravity="center"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="8dp"
                     android:layout_marginTop="8dp"
@@ -76,6 +76,7 @@
 
                 <EditText
                     android:enabled="false"
+                    android:gravity="center"
                     android:id="@+id/edittext_signup_teacher_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -99,6 +100,7 @@
 
                 <EditText
                     android:enabled="false"
+                    android:gravity="center"
                     android:id="@+id/edittext_signup_teacher_family"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -122,6 +124,7 @@
 
                 <EditText
                     android:enabled="false"
+                    android:gravity="center"
                     android:id="@+id/edittext_signup_teacher_email"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -148,6 +151,7 @@
                     android:id="@+id/edittext_signup_teacher_nationalcode"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:gravity="center"
                     android:layout_marginLeft="8dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginRight="8dp"
@@ -174,6 +178,7 @@
                     android:layout_marginLeft="8dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginRight="8dp"
+                    android:gravity="center"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textview_signup_teacher_password" />
@@ -196,6 +201,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="8dp"
                     android:layout_marginTop="8dp"
+                    android:gravity="center"
                     android:layout_marginRight="8dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"

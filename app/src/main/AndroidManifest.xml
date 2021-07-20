@@ -18,8 +18,16 @@
         <activity android:name=".view.SettingStudentActivity"/>
         <activity android:name=".view.FollowedStudentActivity" />
         <activity android:name=".view.MainStudentActivity"/>
-        <activity android:name=".view.SignupTeacherActivity" />
-        <activity android:name=".view.SignupStudentActivity" />
+        <activity android:name=".view.SignupTeacherActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".view.SignupStudentActivity" >
+
+        </activity>
         <activity android:name=".view.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

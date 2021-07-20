@@ -35,6 +35,14 @@
     <string name="text_signup_student_textview_confirm_password">تکرار رمز عبور</string>
     <string name="text_signup_student_button_signup">ثبت نام</string>
     <string name="text_signup_student_textview_login">ثبت نام هستم</string>
+    <string name="text_toast_signup_student_character_name">نام خود را درست وارد کنید</string>
+    <string name="text_toast_signup_student_character_family">نام خانوادگی خود را درست وارد کنید</string>
+    <string name="text_toast_signup_student_available_email">ایمیل تکراری است</string>
+    <string name="text_toast_signup_student_empty_email">ایمیل خود را درست وارد کنید</string>
+    <string name="text_toast_signup_student_available_nationalcode">کدملی تکراری است</string>
+    <string name="text_toast_signup_student_empty_nationalcode">کدملی خود را درست وارد کنید</string>
+    <string name="text_toast_signup_student_confirm_password">رمز عبور با تکرارش یکی نمی باشد</string>
+    <string name="text_toast_signup_student_length_password">تعداد کاراکتر رمز عبور کم تر از شش کاراکتر می باشد</string>
     <!-- signup teacher page texts -->
     <string name="text_signup_teacher_title_toolbar">ثبت نام استاد</string>
     <string name="text_signup_teacher_textview_register_code">کد ثبت نام</string>
@@ -47,6 +55,15 @@
     <string name="text_signup_teacher_textview_confirm_password">تکرار رمز عبور</string>
     <string name="text_signup_teacher_button_signup">ثبت نام</string>
     <string name="text_signup_teacher_textview_login">ثبت نام هستم</string>
+    <string name="text_toast_signup_teacher_register_code">کد ثبت نام را بررسی کنید</string>
+    <string name="text_toast_signup_teacher_character_name">نام خود را درست وارد کنید</string>
+    <string name="text_toast_signup_teacher_character_family">نام خانوادگی خود را درست وارد کنید</string>
+    <string name="text_toast_signup_teacher_available_email">ایمیل تکراری است</string>
+    <string name="text_toast_signup_teacher_empty_email">ایمیل خود را درست وارد کنید</string>
+    <string name="text_toast_signup_teacher_available_nationalcode">کدملی تکراری است</string>
+    <string name="text_toast_signup_teacher_empty_nationalcode">کدملی خود را درست وارد کنید</string>
+    <string name="text_toast_signup_teacher_confirm_password">رمز عبور با تکرارش یکی نمی باشد</string>
+    <string name="text_toast_signup_teacher_length_password">تعداد کاراکتر رمز عبور کم تر از شش کاراکتر می باشد</string>
     <!-- main student page texts -->
     <string name="text_main_student_title_toolbar">صفحه اصلی</string>
     <string name="text_main_student_edittext_hint_search">جستجو کنید</string>
