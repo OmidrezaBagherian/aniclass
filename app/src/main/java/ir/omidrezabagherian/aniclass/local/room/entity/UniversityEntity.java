@@ -7,7 +7,7 @@ import androidx.room.PrimaryKey;
 
 @Entity(tableName = "university_tb")
 public class UniversityEntity {
-  @PrimaryKey
+  @PrimaryKey(autoGenerate = true)
   public int id;
 
   @NonNull

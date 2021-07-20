@@ -30,9 +30,14 @@ public interface AniClassDao {
   @Query("SELECT * FROM user_tb WHERE national_code=:national_code AND password=:password")
   Single<UserEntity> userLogin(String national_code , String password);
   
-
+  @Insert(onConflict = OnConflictStrategy.REPLACE)
+  Single<Long> userSignup(UserEntity userEntity);
+  
   @Query("SELECT * FROM teacher_tb WHERE national_code=:national_code AND password=:password")
   Single<TeacherEntity> teacherLogin(String national_code , String password);
+  
+  @Insert(onConflict = OnConflictStrategy.REPLACE)
+  Single<Long> teacherSingup(TeacherEntity teacherEntity);
   
   @Query("SELECT * FROM teacher_tb WHERE id=:teacherId")
   Observable<TeacherEntity> getTeacherById(int teacherId);

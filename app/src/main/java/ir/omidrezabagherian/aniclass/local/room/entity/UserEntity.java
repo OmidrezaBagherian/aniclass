@@ -7,7 +7,7 @@ import androidx.room.PrimaryKey;
 
 @Entity(tableName = "user_tb")
 public class UserEntity {
-  @PrimaryKey
+  @PrimaryKey(autoGenerate = true)
   public int id;
 
   @NonNull
