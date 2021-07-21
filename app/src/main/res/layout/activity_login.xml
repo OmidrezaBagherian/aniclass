@@ -47,8 +47,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="8dp"
                     android:layout_marginTop="8dp"
-                    android:gravity="center"
                     android:layout_marginRight="8dp"
+                    android:gravity="center"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textview_login_nationalcode" />
@@ -70,8 +70,9 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="8dp"
                     android:layout_marginTop="8dp"
-                    android:gravity="center"
                     android:layout_marginRight="8dp"
+                    android:gravity="center"
+                    android:inputType="textPassword"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textview_login_password" />
@@ -89,22 +90,22 @@
                     app:layout_constraintTop_toBottomOf="@+id/edittext_login_password">
 
                     <CheckBox
-                        android:textSize="18sp"
                         android:id="@+id/checkbox_login_is_teacher"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/text_login_checkbox_is_teacher" />
+                        android:text="@string/text_login_checkbox_is_teacher"
+                        android:textSize="18sp" />
 
                     <Space
                         android:layout_width="10dp"
                         android:layout_height="match_parent" />
 
                     <CheckBox
-                        android:textSize="18sp"
                         android:id="@+id/checkbox_login_show_password"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/text_login_checkbox_show_password" />
+                        android:text="@string/text_login_checkbox_show_password"
+                        android:textSize="18sp" />
 
                 </LinearLayout>
 
@@ -113,8 +114,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="12dp"
-                    android:textSize="16sp"
                     android:text="@string/text_login_button_login"
+                    android:textSize="16sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/linearlayout_login_checkboxs" />
