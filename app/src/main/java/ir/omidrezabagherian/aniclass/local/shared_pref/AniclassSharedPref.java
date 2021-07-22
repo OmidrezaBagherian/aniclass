@@ -21,7 +21,7 @@ public class AniclassSharedPref {
     
     
     public static boolean isLogined() {
-        return sharedPreferences.getInt("id", -1) != -1;
+        return sharedPreferences.getLong("id", -1) != -1;
     }
     
     
@@ -30,25 +30,25 @@ public class AniclassSharedPref {
     }
     
     public static void login(UserEntity userEntity) {
-        editor.putInt("id"    , userEntity.id);
+        editor.putLong("id"    , userEntity.id);
         editor.putInt("is_teacher"    , 0);
         editor.commit();
     }
     
     public static void login(TeacherEntity teacherEntity) {
-        editor.putInt("id"    , teacherEntity.id);
+        editor.putLong("id"    , teacherEntity.id);
         editor.putInt("is_teacher"    , 1);
         editor.commit();
     }
     
     public static void signup(TeacherEntity teacherEntity) {
-        editor.putInt("id"    , teacherEntity.id);
+        editor.putLong("id"    , teacherEntity.id);
         editor.putInt("is_teacher"    , 1);
         editor.commit();
     }
     
     public static void signup(UserEntity userEntity) {
-        editor.putInt("id"    , userEntity.id);
+        editor.putLong("id"    , userEntity.id);
         editor.putInt("is_teacher"    , 0);
         editor.commit();
     }

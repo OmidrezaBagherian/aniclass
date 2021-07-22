@@ -10,13 +10,20 @@ package ir.omidrezabagherian.aniclass.core;
 import android.app.Application;
 import android.content.Context;
 
+import io.reactivex.rxjava3.plugins.RxJavaPlugins;
+import ir.omidrezabagherian.aniclass.local.room.AniClassDataBase;
+import ir.omidrezabagherian.aniclass.local.room.dao.AniClassDao;
+
 public class Base extends Application {
     private static Context mContext;
+    private static AniClassDao dao;
     
     @Override
     public void onCreate() {
         super.onCreate();
         mContext = this;
+        RxJavaPlugins.setErrorHandler(throwable -> {}); // nothing or some logging
+        dao = AniClassDataBase.getDatabase(this).getDao();
     }
     
     public static Context getContext() {
@@ -27,5 +34,8 @@ public class Base extends Application {
         mContext = context;
     }
     
+    public static AniClassDao getDao() {
+        return dao;
+    }
     
 }

@@ -30,13 +30,13 @@ public interface AniClassDao {
   @Query("SELECT * FROM user_tb WHERE national_code=:national_code AND password=:password")
   Single<UserEntity> userLogin(String national_code , String password);
   
-  @Insert(onConflict = OnConflictStrategy.REPLACE)
+  @Insert(onConflict = OnConflictStrategy.IGNORE)
   Single<Long> userSignup(UserEntity userEntity);
   
   @Query("SELECT * FROM teacher_tb WHERE national_code=:national_code AND password=:password")
   Single<TeacherEntity> teacherLogin(String national_code , String password);
   
-  @Insert(onConflict = OnConflictStrategy.REPLACE)
+  @Insert(onConflict = OnConflictStrategy.IGNORE)
   Single<Long> teacherSingup(TeacherEntity teacherEntity);
   
   @Query("SELECT * FROM teacher_tb WHERE id=:teacherId")
@@ -48,19 +48,19 @@ public interface AniClassDao {
   @Query("SELECT * FROM university_tb WHERE id=:uniId")
   Observable<UniversityEntity> getUniById(int uniId);
   
-  @Insert(onConflict = OnConflictStrategy.REPLACE)
+  @Insert(onConflict = OnConflictStrategy.IGNORE)
   void insertClass(ClassItemEntity... classItemEntity);
   
-  @Insert(onConflict = OnConflictStrategy.REPLACE)
+  @Insert(onConflict = OnConflictStrategy.IGNORE)
   void insertUser(UserEntity... userEntities);
   
-  @Insert(onConflict = OnConflictStrategy.REPLACE)
+  @Insert(onConflict = OnConflictStrategy.IGNORE)
   void insertTeacher(TeacherEntity... teacherEntities);
   
   @Delete
   void deleteClass(ClassItemEntity classItemEntity);
   
-  @Insert(onConflict = OnConflictStrategy.REPLACE)
+  @Insert(onConflict = OnConflictStrategy.IGNORE)
   void insertFollow(FollowEntity... followEntities);
 
 }

@@ -14,14 +14,11 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers;
 import io.reactivex.rxjava3.disposables.CompositeDisposable;
 import io.reactivex.rxjava3.schedulers.Schedulers;
 import ir.omidrezabagherian.aniclass.R;
 import ir.omidrezabagherian.aniclass.core.Base;
-import ir.omidrezabagherian.aniclass.local.room.AniClassDataBase;
-import ir.omidrezabagherian.aniclass.local.room.dao.AniClassDao;
 import ir.omidrezabagherian.aniclass.local.shared_pref.AniclassSharedPref;
 
 public class LoginActivity extends AppCompatActivity {
@@ -32,7 +29,6 @@ public class LoginActivity extends AppCompatActivity {
     private Button buttonLoginLogin;
     private TextView textViewLoginSignupStudent, textViewLoginSignupTeacher;
 
-    private final AniClassDao dao = AniClassDataBase.getDatabase(Base.getContext()).getDao();
     private CompositeDisposable compositeDisposable = new CompositeDisposable();
 
     @Override
@@ -93,7 +89,7 @@ public class LoginActivity extends AppCompatActivity {
 
         if (checkBoxLoginIsTeacher.isChecked()) { // teacher login
             compositeDisposable.add(
-                    dao.teacherLogin(editTextLoginNationalCode.getText().toString().trim(), editTextLoginPassword.getText().toString().trim()
+                    Base.getDao().teacherLogin(editTextLoginNationalCode.getText().toString().trim(), editTextLoginPassword.getText().toString().trim()
                     ).observeOn(Schedulers.io())
                             .subscribeOn(AndroidSchedulers.mainThread())
                             .subscribe(teacher -> {
@@ -104,7 +100,7 @@ public class LoginActivity extends AppCompatActivity {
                             }));
         } else { // user login
             compositeDisposable.add(
-                    dao.userLogin(editTextLoginNationalCode.getText().toString().trim(), editTextLoginPassword.getText().toString().trim()
+                    Base.getDao().userLogin(editTextLoginNationalCode.getText().toString().trim(), editTextLoginPassword.getText().toString().trim()
                     ).observeOn(Schedulers.io())
                             .subscribeOn(AndroidSchedulers.mainThread())
                             .subscribe(user -> {
