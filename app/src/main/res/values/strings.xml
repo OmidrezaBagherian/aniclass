@@ -97,6 +97,13 @@
     <string name="text_create_class_teacher_textview_university">دانشگاه</string>
     <string name="text_create_class_teacher_textview_about">توضیحات</string>
     <string name="text_create_class_teacher_button_create_class">ایجاد کلاس</string>
+    <string name="text_create_class_teacher_titleLesson">نام درس را درست وارد کنید</string>
+    <string name="text_create_class_teacher_codeLesson">کد درس را درست وارد کنید</string>
+    <string name="text_create_class_teacher_capacity">ظرفیت را درست وارد کنید</string>
+    <string name="text_create_class_teacher_link">لینک را درست وارد کنید</string>
+    <string name="text_create_class_teacher_department">دپارتمان را درست انتخاب کنید</string>
+    <string name="text_create_class_teacher_university">دانشکاه را درست انتخاب کنید</string>
+
     <!-- management student page texts -->
     <string name="text_management_student_title_toolbar">مدیریت کلاس ها</string>
     <!-- detail class texts-->

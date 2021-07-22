@@ -13,7 +13,13 @@
         <activity android:name=".view.DetailClassActivity">
 
         </activity>
-        <activity android:name=".view.CreateClassTeacherActivity"/>
+        <activity android:name=".view.CreateClassTeacherActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".view.SettingTeacherActivity"/>
         <activity android:name=".view.SettingStudentActivity"/>
         <activity android:name=".view.FollowedStudentActivity" />
@@ -25,11 +31,7 @@
 
         </activity>
         <activity android:name=".view.LoginActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 

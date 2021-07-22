@@ -67,6 +67,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/edittext_create_class_title_lesson" />
 
                 <EditText
+                    android:inputType="number"
                     android:id="@+id/edittext_create_class_code_lesson"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -90,6 +91,7 @@
 
 
                 <EditText
+                    android:inputType="number"
                     android:id="@+id/edittext_create_class_capacity"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

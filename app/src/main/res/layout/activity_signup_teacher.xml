@@ -7,34 +7,37 @@
     android:layoutDirection="rtl"
     tools:context=".view.SignupTeacherActivity">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintlayout_signup_teacher"
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_signup_teacher"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="?attr/actionBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar_signup_teacher"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_marginTop="56dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_signup_teacher">
 
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            app:layout_constraintTop_toBottomOf="@+id/toolbar_signup_teacher">
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" >
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
                 <TextView
-                    android:layout_marginTop="12dp"
                     android:id="@+id/textview_signup_teacher_register_code"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
                     android:text="@string/text_signup_teacher_textview_register_code"
                     android:textSize="18sp"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -44,11 +47,11 @@
                 <EditText
                     android:id="@+id/edittext_signup_teacher_register_code"
                     android:layout_width="match_parent"
-                    android:gravity="center"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="8dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginRight="8dp"
+                    android:gravity="center"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textview_signup_teacher_register_code" />
@@ -64,10 +67,10 @@
                     app:layout_constraintTop_toBottomOf="@+id/edittext_signup_teacher_register_code" />
 
                 <TextView
-                    android:layout_marginTop="12dp"
                     android:id="@+id/textview_signup_teacher_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
                     android:text="@string/text_signup_teacher_textview_name"
                     android:textSize="18sp"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -75,23 +78,23 @@
                     app:layout_constraintTop_toBottomOf="@+id/button_signup_teacher_search_register_code" />
 
                 <EditText
-                    android:enabled="false"
-                    android:gravity="center"
                     android:id="@+id/edittext_signup_teacher_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="8dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginRight="8dp"
+                    android:enabled="false"
+                    android:gravity="center"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textview_signup_teacher_name" />
 
                 <TextView
-                    android:layout_marginTop="12dp"
                     android:id="@+id/textview_signup_teacher_family"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
                     android:text="@string/text_signup_teacher_textview_family"
                     android:textSize="18sp"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -99,23 +102,23 @@
                     app:layout_constraintTop_toBottomOf="@+id/edittext_signup_teacher_name" />
 
                 <EditText
-                    android:enabled="false"
-                    android:gravity="center"
                     android:id="@+id/edittext_signup_teacher_family"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="8dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginRight="8dp"
+                    android:enabled="false"
+                    android:gravity="center"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textview_signup_teacher_family" />
 
                 <TextView
-                    android:layout_marginTop="12dp"
                     android:id="@+id/textview_signup_teacher_email"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
                     android:text="@string/text_signup_teacher_textview_email"
                     android:textSize="18sp"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -123,23 +126,23 @@
                     app:layout_constraintTop_toBottomOf="@+id/edittext_signup_teacher_family" />
 
                 <EditText
-                    android:enabled="false"
-                    android:gravity="center"
                     android:id="@+id/edittext_signup_teacher_email"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="8dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginRight="8dp"
+                    android:enabled="false"
+                    android:gravity="center"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textview_signup_teacher_email" />
 
                 <TextView
-                    android:layout_marginTop="12dp"
                     android:id="@+id/textview_signup_teacher_nationalcode"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
                     android:text="@string/text_signup_teacher_textview_nationalcode"
                     android:textSize="18sp"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -147,23 +150,23 @@
                     app:layout_constraintTop_toBottomOf="@+id/edittext_signup_teacher_email" />
 
                 <EditText
-                    android:enabled="false"
                     android:id="@+id/edittext_signup_teacher_nationalcode"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
                     android:layout_marginLeft="8dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginRight="8dp"
+                    android:enabled="false"
+                    android:gravity="center"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textview_signup_teacher_nationalcode" />
 
                 <TextView
-                    android:layout_marginTop="12dp"
                     android:id="@+id/textview_signup_teacher_password"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
                     android:text="@string/text_signup_teacher_textview_password"
                     android:textSize="18sp"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -171,23 +174,23 @@
                     app:layout_constraintTop_toBottomOf="@+id/edittext_signup_teacher_nationalcode" />
 
                 <EditText
-                    android:enabled="false"
                     android:id="@+id/edittext_signup_teacher_password"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="8dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginRight="8dp"
+                    android:enabled="false"
                     android:gravity="center"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textview_signup_teacher_password" />
 
                 <TextView
-                    android:layout_marginTop="12dp"
                     android:id="@+id/textview_signup_teacher_confirm_password"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
                     android:text="@string/text_signup_teacher_textview_confirm_password"
                     android:textSize="18sp"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -195,14 +198,14 @@
                     app:layout_constraintTop_toBottomOf="@+id/edittext_signup_teacher_password" />
 
                 <EditText
-                    android:enabled="false"
                     android:id="@+id/edittext_signup_teacher_confirm_password"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="8dp"
                     android:layout_marginTop="8dp"
-                    android:gravity="center"
                     android:layout_marginRight="8dp"
+                    android:enabled="false"
+                    android:gravity="center"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textview_signup_teacher_confirm_password" />
@@ -212,7 +215,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="12dp"
+                    android:layout_marginBottom="12dp"
                     android:text="@string/text_signup_teacher_button_signup"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/edittext_signup_teacher_confirm_password" />
