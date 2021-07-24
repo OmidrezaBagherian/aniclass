@@ -12,7 +12,6 @@ import io.reactivex.rxjava3.core.Single;
 import ir.omidrezabagherian.aniclass.local.room.entity.ClassItemEntity;
 import ir.omidrezabagherian.aniclass.local.room.entity.FollowEntity;
 import ir.omidrezabagherian.aniclass.local.room.entity.TeacherEntity;
-import ir.omidrezabagherian.aniclass.local.room.entity.UniversityEntity;
 import ir.omidrezabagherian.aniclass.local.room.entity.UserEntity;
 
 @Dao
@@ -45,11 +44,9 @@ public interface AniClassDao {
   @Query("SELECT * FROM user_tb WHERE id=:userId")
   Observable<UserEntity> getUserById(int userId);
   
-  @Query("SELECT * FROM university_tb WHERE id=:uniId")
-  Observable<UniversityEntity> getUniById(int uniId);
   
   @Insert(onConflict = OnConflictStrategy.IGNORE)
-  void insertClass(ClassItemEntity... classItemEntity);
+  Single<Long> insertClass(ClassItemEntity classItemEntity);
   
   @Insert(onConflict = OnConflictStrategy.IGNORE)
   void insertUser(UserEntity... userEntities);

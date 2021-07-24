@@ -1,15 +1,8 @@
 package ir.omidrezabagherian.aniclass.view;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-import androidx.drawerlayout.widget.DrawerLayout;
-
-import ir.omidrezabagherian.aniclass.R;
-
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
@@ -22,6 +15,22 @@ import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.drawerlayout.widget.DrawerLayout;
+import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers;
+import io.reactivex.rxjava3.disposables.CompositeDisposable;
+import io.reactivex.rxjava3.schedulers.Schedulers;
+import ir.omidrezabagherian.aniclass.R;
+import ir.omidrezabagherian.aniclass.core.Base;
+import ir.omidrezabagherian.aniclass.local.room.entity.ClassItemEntity;
+import ir.omidrezabagherian.aniclass.local.shared_pref.AniclassSharedPref;
+import io.reactivex.rxjava3.core.Single;
+
+
+
 public class CreateClassTeacherActivity extends AppCompatActivity {
 
     private Toolbar toolbarCreateClassTeacher;
@@ -30,7 +39,8 @@ public class CreateClassTeacherActivity extends AppCompatActivity {
     private EditText editTextCreateClassTeacherTitleLesson, editTextCreateClassTeacherCodeLesson, editTextCreateClassTeacherCapacity, editTextCreateClassTeacherLink, editTextCreateClassTeacherAbout;
     private Spinner spinnerCreateClassTeacherChoiceDepartment, spinnerCreateClassTeacherChoiceUniversity;
     private Button buttonCreateClassTeacherCreateClass;
-
+    private CompositeDisposable compositeDisposable = new CompositeDisposable();
+    
     String[] departments = {
             "فناوری اطلاعات",
             "علوم مهندسی",
@@ -48,12 +58,15 @@ public class CreateClassTeacherActivity extends AppCompatActivity {
     };
 
     String department, university;
+    private long currentId = -1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_class_teacher);
-
+        
+        currentId = AniclassSharedPref.getCurrentId();
+        
         toolbarCreateClassTeacher = findViewById(R.id.toolbar_create_class);
         drawerLayoutCreateClassTeacher = findViewById(R.id.drawerlayout_create_class);
         navigationViewCreateClassTeacher = findViewById(R.id.navigationview_create_class);
@@ -131,34 +144,81 @@ public class CreateClassTeacherActivity extends AppCompatActivity {
         buttonCreateClassTeacherCreateClass.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                String titleLesson = editTextCreateClassTeacherTitleLesson.getText().toString();
-                String codeLesson = editTextCreateClassTeacherCodeLesson.getText().toString();
-                String capacity = editTextCreateClassTeacherCodeLesson.getText().toString();
-                String link = editTextCreateClassTeacherLink.getText().toString();
-                String about = editTextCreateClassTeacherAbout.getText().toString();
-
-                if (titleLesson.length() <= 2) {
-                    Toast.makeText(CreateClassTeacherActivity.this, R.string.text_create_class_teacher_titleLesson, Toast.LENGTH_SHORT).show();
-                }
-                if (codeLesson.equals("")) {
-                    Toast.makeText(CreateClassTeacherActivity.this, R.string.text_create_class_teacher_codeLesson, Toast.LENGTH_SHORT).show();
-                }
-                if (capacity.equals("")) {
-                    Toast.makeText(CreateClassTeacherActivity.this, R.string.text_create_class_teacher_capacity, Toast.LENGTH_SHORT).show();
-                }
-                if (link.length() <= 10) {
-                    Toast.makeText(CreateClassTeacherActivity.this, R.string.text_create_class_teacher_link, Toast.LENGTH_SHORT).show();
-                }
-
-                Toast.makeText(CreateClassTeacherActivity.this, department, Toast.LENGTH_SHORT).show();
-                Toast.makeText(CreateClassTeacherActivity.this, university, Toast.LENGTH_SHORT).show();
-
+               doCreateClass();
             }
         });
 
     }
 
+    private void doCreateClass() {
+        String titleLesson = editTextCreateClassTeacherTitleLesson.getText().toString().trim();
+        String codeLesson = editTextCreateClassTeacherCodeLesson.getText().toString().trim();
+        String capacity = editTextCreateClassTeacherCodeLesson.getText().toString().trim();
+        String link = editTextCreateClassTeacherLink.getText().toString().trim();
+        String about = editTextCreateClassTeacherAbout.getText().toString().trim();
+    
+        if (titleLesson.length() <= 2) {
+            Toast.makeText(CreateClassTeacherActivity.this, R.string.text_create_class_teacher_titleLesson, Toast.LENGTH_SHORT).show();
+            return;
+        }
+        if (codeLesson.equals("")) {
+            Toast.makeText(CreateClassTeacherActivity.this, R.string.text_create_class_teacher_codeLesson, Toast.LENGTH_SHORT).show();
+            return;
+        }
+        if (capacity.equals("")) {
+            Toast.makeText(CreateClassTeacherActivity.this, R.string.text_create_class_teacher_capacity, Toast.LENGTH_SHORT).show();
+            return;
+        }
+        if (link.length() <= 10) {
+            Toast.makeText(CreateClassTeacherActivity.this, R.string.text_create_class_teacher_link, Toast.LENGTH_SHORT).show();
+            return;
+        }
+        if (about.length() <= 5) {
+            Toast.makeText(CreateClassTeacherActivity.this, R.string.text_create_class_teacher_about, Toast.LENGTH_SHORT).show();
+            return;
+        }
+    
+        ClassItemEntity itemEntity = new ClassItemEntity();
+        itemEntity.capacity = capacity;
+        itemEntity.code = codeLesson;
+        itemEntity.desc = about;
+        itemEntity.name = titleLesson;
+        itemEntity.link = link;
+        itemEntity.department = department;
+        itemEntity.university = university;
+        itemEntity.teacherId  = currentId;
+        insertClass(itemEntity);
+    }
+    
+    private void insertClass(ClassItemEntity itemEntity) {
+        Log.i("TEST" , "insertClass Called! " + itemEntity.toString() );
+        compositeDisposable.add(
+            Base.getDao().insertClass(itemEntity)
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(id -> { // successfully created
+                    Log.i("TEST" , "insertClass created! " + id );
+                    Toast.makeText(CreateClassTeacherActivity.this, R.string.text_create_class_teacher_success, Toast.LENGTH_LONG).show();
+                    goManagmentTeacherActivity();
+                }, error -> { // error in create
+                    Toast.makeText(CreateClassTeacherActivity.this, R.string.text_create_class_teacher_error, Toast.LENGTH_LONG).show();
+                    Log.i("TEST" , "insertClass error! " );
+            }
+        ));
+    }
+    
+    private void goManagmentTeacherActivity() {
+        startActivity(new Intent(this, ManagementTeacherActivity.class));
+        finish();
+    }
+    
+    @Override
+    protected void onDestroy() {
+        compositeDisposable.clear();
+        compositeDisposable = null;
+        super.onDestroy();
+    }
+    
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
 

@@ -110,8 +110,8 @@ public class SignupTeacherActivity extends AppCompatActivity {
     
     private void signupTeacher(TeacherEntity teacher) {
         compositeDisposable.add(Base.getDao().teacherSingup(teacher)
-            .observeOn(Schedulers.io())
-            .subscribeOn(AndroidSchedulers.mainThread())
+            .observeOn(AndroidSchedulers.mainThread())
+            .subscribeOn(Schedulers.io())
             .subscribe(id -> {
                 teacher.id = id;
                 AniclassSharedPref.signup(teacher);

@@ -90,8 +90,8 @@ public class LoginActivity extends AppCompatActivity {
         if (checkBoxLoginIsTeacher.isChecked()) { // teacher login
             compositeDisposable.add(
                     Base.getDao().teacherLogin(editTextLoginNationalCode.getText().toString().trim(), editTextLoginPassword.getText().toString().trim()
-                    ).observeOn(Schedulers.io())
-                            .subscribeOn(AndroidSchedulers.mainThread())
+                    ).observeOn(AndroidSchedulers.mainThread())
+                            .subscribeOn(Schedulers.io())
                             .subscribe(teacher -> {
                                 AniclassSharedPref.login(teacher);
                                 goManagmentTeacherActivity();
@@ -101,8 +101,8 @@ public class LoginActivity extends AppCompatActivity {
         } else { // user login
             compositeDisposable.add(
                     Base.getDao().userLogin(editTextLoginNationalCode.getText().toString().trim(), editTextLoginPassword.getText().toString().trim()
-                    ).observeOn(Schedulers.io())
-                            .subscribeOn(AndroidSchedulers.mainThread())
+                    ).observeOn(AndroidSchedulers.mainThread())
+                            .subscribeOn(Schedulers.io())
                             .subscribe(user -> {
                                 AniclassSharedPref.login(user);
                                 goMainStudentActivity();

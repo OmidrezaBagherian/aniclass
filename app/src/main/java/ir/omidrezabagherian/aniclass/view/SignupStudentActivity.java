@@ -97,8 +97,8 @@ public class SignupStudentActivity extends AppCompatActivity {
     
     private void signupStudent(UserEntity user) {
         compositeDisposable.add(Base.getDao().userSignup(user)
-            .observeOn(Schedulers.io())
-            .subscribeOn(AndroidSchedulers.mainThread())
+            .observeOn(AndroidSchedulers.mainThread())
+            .subscribeOn(Schedulers.io())
             .subscribe(id -> {
                 Log.i("TEST" , "THIS IS : " + id);
                 user.id = id;

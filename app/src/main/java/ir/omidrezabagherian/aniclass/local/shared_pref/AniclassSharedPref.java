@@ -53,4 +53,7 @@ public class AniclassSharedPref {
         editor.commit();
     }
     
+    public static long getCurrentId() {
+        return sharedPreferences.getLong("id" , -1);
+    }
 }

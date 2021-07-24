@@ -101,8 +101,11 @@
     <string name="text_create_class_teacher_codeLesson">کد درس را درست وارد کنید</string>
     <string name="text_create_class_teacher_capacity">ظرفیت را درست وارد کنید</string>
     <string name="text_create_class_teacher_link">لینک را درست وارد کنید</string>
+    <string name="text_create_class_teacher_about">توضیحات را کامل کنید.</string>
     <string name="text_create_class_teacher_department">دپارتمان را درست انتخاب کنید</string>
     <string name="text_create_class_teacher_university">دانشکاه را درست انتخاب کنید</string>
+    <string name="text_create_class_teacher_error">مشکلی در ایجاد کردن کلاس وجود دارد !!!</string>
+    <string name="text_create_class_teacher_success">با موفقیت کلاس شما ایجاد شد.</string>
 
     <!-- management student page texts -->
     <string name="text_management_student_title_toolbar">مدیریت کلاس ها</string>

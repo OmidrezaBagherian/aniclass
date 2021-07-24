@@ -24,6 +24,7 @@
         <activity android:name=".view.SettingStudentActivity"/>
         <activity android:name=".view.FollowedStudentActivity" />
         <activity android:name=".view.MainStudentActivity"/>
+        <activity android:name=".view.ManagementTeacherActivity"/>
         <activity android:name=".view.SignupTeacherActivity" >
 
         </activity>

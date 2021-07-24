@@ -11,13 +11,11 @@ import ir.omidrezabagherian.aniclass.local.room.dao.AniClassDao;
 import ir.omidrezabagherian.aniclass.local.room.entity.ClassItemEntity;
 import ir.omidrezabagherian.aniclass.local.room.entity.FollowEntity;
 import ir.omidrezabagherian.aniclass.local.room.entity.TeacherEntity;
-import ir.omidrezabagherian.aniclass.local.room.entity.UniversityEntity;
 import ir.omidrezabagherian.aniclass.local.room.entity.UserEntity;
 
 @Database(entities = {
     ClassItemEntity.class,
     TeacherEntity.class,
-    UniversityEntity.class,
     UserEntity.class ,
     FollowEntity.class
 }, version = 1 , exportSchema = false)

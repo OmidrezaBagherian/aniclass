@@ -9,7 +9,7 @@ import androidx.room.PrimaryKey;
 public class ClassItemEntity {
 
   @PrimaryKey(autoGenerate = true)
-  public int id;
+  public long id;
   @NonNull
   @ColumnInfo
   public String code;
@@ -24,15 +24,15 @@ public class ClassItemEntity {
   public String link;
   @NonNull
   @ColumnInfo
-  public int capacity;
+  public String capacity;
   @NonNull
   @ColumnInfo(name = "teacher_id")
-  public int teacherId;
+  public long teacherId;
   @NonNull
-  @ColumnInfo(name = "department_id")
-  public int departmentId;
+  @ColumnInfo(name = "department")
+  public String department;
   @NonNull
-  @ColumnInfo(name = "university_id")
-  public int universityId;
+  @ColumnInfo(name = "university")
+  public String university;
 
 }
