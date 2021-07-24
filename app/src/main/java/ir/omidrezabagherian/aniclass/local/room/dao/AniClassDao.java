@@ -20,6 +20,9 @@ public interface AniClassDao {
   @Query("SELECT * FROM class_tb")
   Observable<List<ClassItemEntity>> getAllClass();
 
+  @Query("SELECT * FROM class_tb WHERE teacher_id=:id")
+  Observable<List<ClassItemEntity>> getCreatedClassesByTeacherId(long id);
+  
   @Query("SELECT * FROM class_tb WHERE id=:classId")
   Observable<List<ClassItemEntity>> getClassById(int classId);
 
