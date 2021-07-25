@@ -16,9 +16,9 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_marginTop="56dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
         app:layout_constraintTop_toBottomOf="@+id/toolbar_signup_teacher">
 
         <ScrollView
@@ -27,7 +27,7 @@
             android:layout_marginTop="8dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" >
+            app:layout_constraintTop_toTopOf="parent">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -51,6 +51,7 @@
                     android:layout_marginLeft="8dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginRight="8dp"
+                    android:maxLines="1"
                     android:gravity="center"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -84,6 +85,7 @@
                     android:layout_marginLeft="8dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginRight="8dp"
+                    android:maxLines="1"
                     android:enabled="false"
                     android:gravity="center"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -133,7 +135,9 @@
                     android:layout_marginTop="8dp"
                     android:layout_marginRight="8dp"
                     android:enabled="false"
+                    android:maxLines="1"
                     android:gravity="center"
+                    android:inputType="textEmailAddress"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textview_signup_teacher_email" />
@@ -156,8 +160,11 @@
                     android:layout_marginLeft="8dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginRight="8dp"
+                    android:maxLines="1"
+                    android:maxLength="10"
                     android:enabled="false"
                     android:gravity="center"
+                    android:inputType="number"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textview_signup_teacher_nationalcode" />
@@ -181,7 +188,9 @@
                     android:layout_marginTop="8dp"
                     android:layout_marginRight="8dp"
                     android:enabled="false"
+                    android:maxLines="1"
                     android:gravity="center"
+                    android:inputType="textPassword"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textview_signup_teacher_password" />
@@ -206,6 +215,8 @@
                     android:layout_marginRight="8dp"
                     android:enabled="false"
                     android:gravity="center"
+                    android:maxLines="1"
+                    android:inputType="textPassword"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textview_signup_teacher_confirm_password" />

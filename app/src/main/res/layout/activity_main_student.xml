@@ -54,55 +54,10 @@
                     android:src="@drawable/ic_round_search" />
 
             </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:weightSum="170">
-
-                <Space
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_weight="5" />
-
-                <Spinner
-                    android:id="@+id/spinner_main_student_choice_city"
-                    android:layout_width="wrap_content"
-                    android:layout_height="40dp"
-                    android:layout_weight="50" />
-
-                <Space
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_weight="5" />
-
-                <Spinner
-                    android:id="@+id/spinner_main_student_choice_university"
-                    android:layout_width="wrap_content"
-                    android:layout_height="40dp"
-                    android:layout_weight="50" />
-
-                <Space
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_weight="5" />
-
-                <Spinner
-                    android:id="@+id/spinner_main_student_choice_department"
-                    android:layout_width="wrap_content"
-                    android:layout_height="40dp"
-                    android:layout_weight="50" />
-
-                <Space
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_weight="5" />
-            </LinearLayout>
         </LinearLayout>
 
-
         <androidx.recyclerview.widget.RecyclerView
+            android:layout_marginTop="8dp"
             android:id="@+id/recyclerview_main_student_classes"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

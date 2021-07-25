@@ -4,6 +4,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
@@ -38,9 +41,6 @@ public class MainStudentActivity extends AppCompatActivity {
         navigationViewMainStudent = (NavigationView) findViewById(R.id.navigationview_main_student);
         editTextMainStudentSearchClass = (EditText) findViewById(R.id.edittext_main_student_search_class);
         imageViewMainStudentApplySearch = (ImageView) findViewById(R.id.imageview_main_student_apply_search);
-        spinnerMainStudentCity = (Spinner) findViewById(R.id.spinner_main_student_choice_city);
-        spinnerMainStudentDepartment = (Spinner) findViewById(R.id.spinner_main_student_choice_department);
-        spinnerMainStudentUniversity = (Spinner) findViewById(R.id.spinner_main_student_choice_university);
         recyclerViewMainStudentClasses = (RecyclerView) findViewById(R.id.recyclerview_main_student_classes);
 
         toolbarMainStudent.setTitle(R.string.text_main_student_title_toolbar);

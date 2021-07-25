@@ -38,5 +38,7 @@ public class DetailClassActivity extends AppCompatActivity {
         setSupportActionBar(toolbarDetailClass);
 
 
+
+
     }
 }
