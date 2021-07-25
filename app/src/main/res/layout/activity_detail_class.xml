@@ -88,7 +88,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/textview_detail_class_input_code_lesson" />
 
                 <TextView
-                    android:id="@+id/textview_detail_class_teacher_input_teacher_name"
+                    android:id="@+id/textview_detail_class_input_teacher_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="12dp"
@@ -107,7 +107,7 @@
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textview_detail_class_teacher_input_teacher_name" />
+                    app:layout_constraintTop_toBottomOf="@+id/textview_detail_class_input_teacher_name" />
 
                 <TextView
                     android:id="@+id/textview_detail_class_input_department"
@@ -132,7 +132,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/textview_detail_class_input_department" />
 
                 <TextView
-                    android:id="@+id/textview_detail_class_teacher_input_about"
+                    android:id="@+id/textview_detail_class_input_about"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="12dp"
@@ -151,7 +151,7 @@
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textview_detail_class_teacher_input_about" />
+                    app:layout_constraintTop_toBottomOf="@+id/textview_detail_class_input_about" />
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recyclerview_detail_class_links"
