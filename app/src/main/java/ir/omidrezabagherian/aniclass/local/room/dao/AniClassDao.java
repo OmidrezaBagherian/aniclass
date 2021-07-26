@@ -7,12 +7,16 @@ import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
+import androidx.room.RawQuery;
+import androidx.sqlite.db.SimpleSQLiteQuery;
+import androidx.sqlite.db.SupportSQLiteQuery;
 import io.reactivex.rxjava3.core.Observable;
 import io.reactivex.rxjava3.core.Single;
 import ir.omidrezabagherian.aniclass.local.room.entity.ClassItemEntity;
 import ir.omidrezabagherian.aniclass.local.room.entity.FollowEntity;
 import ir.omidrezabagherian.aniclass.local.room.entity.TeacherEntity;
 import ir.omidrezabagherian.aniclass.local.room.entity.UserEntity;
+import ir.omidrezabagherian.aniclass.model.CustomClassItem;
 
 @Dao
 public interface AniClassDao {
@@ -47,7 +51,6 @@ public interface AniClassDao {
   @Query("SELECT * FROM user_tb WHERE id=:userId")
   Observable<UserEntity> getUserById(int userId);
   
-  
   @Insert(onConflict = OnConflictStrategy.IGNORE)
   Single<Long> insertClass(ClassItemEntity classItemEntity);
   
@@ -62,5 +65,12 @@ public interface AniClassDao {
   
   @Insert(onConflict = OnConflictStrategy.IGNORE)
   void insertFollow(FollowEntity... followEntities);
-
+  
+  @RawQuery
+  Single<List<CustomClassItem>> getClassesItem(SupportSQLiteQuery supportSQLiteQuery);
+  
+  default Single<List<CustomClassItem>> getCustomClassesItem() {
+    String query = "SELECT class_tb.* , teacher_tb.name as teacher_name FROM class_tb JOIN teacher_tb ON class_tb.teacher_id=teacher_tb.id; ";
+    return getClassesItem(new SimpleSQLiteQuery(query , new ClassItemEntity[0]));
+  }
 }
