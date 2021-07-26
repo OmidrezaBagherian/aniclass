@@ -57,13 +57,13 @@
         </LinearLayout>
 
         <androidx.recyclerview.widget.RecyclerView
-            android:layout_marginTop="8dp"
-            android:id="@+id/recyclerview_main_student_classes"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearlayout_main_student_search_box" />
+          android:id="@+id/recyclerview_main_student_classes"
+          android:layout_width="match_parent"
+          android:layout_height="0dp"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/linearlayout_main_student_search_box" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
