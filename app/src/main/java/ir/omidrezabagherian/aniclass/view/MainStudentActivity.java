@@ -57,7 +57,18 @@ public class MainStudentActivity extends AppCompatActivity {
         actionBarMainStudent.setHomeAsUpIndicator(R.drawable.ic_round_menu);
         
         mainClassItemAdapter = new MainClassItemAdapter(this, (v, item) -> {
-            startActivity(new Intent(MainStudentActivity.this, DetailClassActivity.class));
+            Bundle bundle = new Bundle();
+            bundle.putString("title" , item.name);
+            bundle.putString("code" , item.code);
+            bundle.putString("teacherName" , item.teacher_name);
+            bundle.putString("dpartment" , item.department);
+            bundle.putString("link" , item.link);
+            bundle.putString("desc" , item.desc);
+    
+            Intent intent = new Intent(MainStudentActivity.this , DetailClassActivity.class);
+            intent.putExtra("detail" , bundle);
+    
+            startActivity(intent);
         });
         
         recyclerViewMainStudentClasses.setAdapter(mainClassItemAdapter);

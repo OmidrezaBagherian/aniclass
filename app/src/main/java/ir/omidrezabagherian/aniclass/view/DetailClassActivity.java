@@ -1,23 +1,16 @@
 package ir.omidrezabagherian.aniclass.view;
 
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.MenuItem;
+import android.widget.TextView;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.RecyclerView;
-
 import ir.omidrezabagherian.aniclass.R;
-
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.Gravity;
-import android.view.MenuItem;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.TextView;
-
-import com.google.android.material.navigation.NavigationView;
 
 public class DetailClassActivity extends AppCompatActivity {
 
@@ -46,30 +39,20 @@ public class DetailClassActivity extends AppCompatActivity {
         actionBarCreateClassTeacher.setDisplayHomeAsUpEnabled(true);
         actionBarCreateClassTeacher.setHomeAsUpIndicator(R.drawable.ic_round_back);
 
-        data[0] = "پایگاه داده";
-        textViewDetailClassTitleLesson.setText(data[0]);
-        data[1] = "1022310";
-        textViewDetailClassCodeLesson.setText(data[1]);
-        data[2] = "مسعود ترابی";
-        textViewDetailClassTeacherName.setText(data[2]);
-        data[3] = "فنی مهندسی";
-        textViewDetailClassDepartment.setText(data[3]);
-        data[4] = "این کلاس برای دانشجویان ورودی 98 می باشد";
-        textViewDetailClassAbout.setText(data[4]);
-        data[5] = "جلسه اول";
-        data[6] = "14:00";
-        data[7] = "1400/07/01";
-        data[8] = "https://www.google.com/";
-        /*String titleLesson = "پایگاه داده";
-        textViewDetailClassTitleLesson.setText(titleLesson);
-        int codeLesson = 1022310;
-        textViewDetailClassCodeLesson.setText(String.valueOf(codeLesson));
-        String teacherName = "مسعود ترابی";
+        Intent intent = getIntent();
+        Bundle bundle = intent.getBundleExtra("detail");
+        String title = bundle.getString("title");
+        String code  = bundle.getString("code");
+        String teacherName = bundle.getString("teacherName");
+        String department = bundle.getString("dpartment");
+        String link = bundle.getString("link");
+        String decs = bundle.getString("desc");
+        
+        textViewDetailClassTitleLesson.setText(title);
+        textViewDetailClassCodeLesson.setText(code);
         textViewDetailClassTeacherName.setText(teacherName);
-        String department = "فنی مهندسی";
         textViewDetailClassDepartment.setText(department);
-        String about = "این کلاس برای دانشجویان ورودی 98 می باشد";
-        textViewDetailClassAbout.setText(about);*/
+        textViewDetailClassAbout.setText(decs + "\n" + link );
     }
 
     @Override
@@ -77,8 +60,7 @@ public class DetailClassActivity extends AppCompatActivity {
 
         switch (item.getItemId()) {
             case android.R.id.home:
-                Intent goToMain = new Intent(DetailClassActivity.this, MainStudentActivity.class);
-                startActivity(goToMain);
+                onBackPressed();
                 return true;
         }
         return super.onOptionsItemSelected(item);
