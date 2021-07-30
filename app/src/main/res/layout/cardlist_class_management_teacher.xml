@@ -70,7 +70,7 @@
                 android:id="@+id/button_cardlist_management_teacher_goto_details_page"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/text_cardlist_management_teacher_button_edit_class"
+                android:text="@string/text_cardlist_management_teacher_button_info_class"
                 android:textSize="16sp" />
 
         </LinearLayout>

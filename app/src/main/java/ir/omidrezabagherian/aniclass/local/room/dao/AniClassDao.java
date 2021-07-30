@@ -10,13 +10,14 @@ import androidx.room.Query;
 import androidx.room.RawQuery;
 import androidx.sqlite.db.SimpleSQLiteQuery;
 import androidx.sqlite.db.SupportSQLiteQuery;
+import io.reactivex.rxjava3.core.Maybe;
 import io.reactivex.rxjava3.core.Observable;
 import io.reactivex.rxjava3.core.Single;
 import ir.omidrezabagherian.aniclass.local.room.entity.ClassItemEntity;
 import ir.omidrezabagherian.aniclass.local.room.entity.FollowEntity;
 import ir.omidrezabagherian.aniclass.local.room.entity.TeacherEntity;
 import ir.omidrezabagherian.aniclass.local.room.entity.UserEntity;
-import ir.omidrezabagherian.aniclass.model.CustomClassItem;
+import ir.omidrezabagherian.aniclass.model.QueryAllClasses;
 
 @Dao
 public interface AniClassDao {
@@ -63,13 +64,23 @@ public interface AniClassDao {
   @Delete
   void deleteClass(ClassItemEntity classItemEntity);
   
+  @Query("DELETE FROM class_tb WHERE class_tb.id=:id")
+  Maybe<Integer> deleteClassById(long id);
+  
   @Insert(onConflict = OnConflictStrategy.IGNORE)
   void insertFollow(FollowEntity... followEntities);
   
   @RawQuery
-  Single<List<CustomClassItem>> getClassesItem(SupportSQLiteQuery supportSQLiteQuery);
+  Single<List<QueryAllClasses>> getClassesItemByTeacherId(SupportSQLiteQuery supportSQLiteQuery);
+  @RawQuery
+  Single<List<QueryAllClasses>> getClassesItem(SupportSQLiteQuery supportSQLiteQuery);
   
-  default Single<List<CustomClassItem>> getCustomClassesItem() {
+  default Single<List<QueryAllClasses>> getCustomClassesItemByTeacherId(Long id) {
+    String query = "SELECT class_tb.* , teacher_tb.name as teacher_name FROM class_tb JOIN teacher_tb ON class_tb.teacher_id=teacher_tb.id WHERE class_tb.teacher_id=:id; ";
+    return getClassesItemByTeacherId(new SimpleSQLiteQuery(query , new Long[]{id}));
+  }
+  
+  default Single<List<QueryAllClasses>> getCustomClassesItem() {
     String query = "SELECT class_tb.* , teacher_tb.name as teacher_name FROM class_tb JOIN teacher_tb ON class_tb.teacher_id=teacher_tb.id; ";
     return getClassesItem(new SimpleSQLiteQuery(query , new ClassItemEntity[0]));
   }

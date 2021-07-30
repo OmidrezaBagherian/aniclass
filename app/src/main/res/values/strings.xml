@@ -135,7 +135,7 @@
     <string name="text_cardlist_management_teacher_textview_department">دپارتمان درسی</string>
     <string name="text_cardlist_management_teacher_textview_teacher_name">نام استاد</string>
     <string name="text_cardlist_management_teacher_textview_university_name">نام دانشگاه</string>
-    <string name="text_cardlist_management_teacher_button_edit_class">ویرایش</string>
+    <string name="text_cardlist_management_teacher_button_info_class">جزییات</string>
     <string name="text_cardlist_management_teacher_button_delete_lesson">پاک کردن</string>
     <!-- card list detail teacher texts -->
     <string name="text_cardlist_detail_teacher_textview_title_lesson">عنوان جلسه</string>

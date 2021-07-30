@@ -90,7 +90,7 @@ public class SignupTeacherActivity extends AppCompatActivity {
                     Toast.makeText(SignupTeacherActivity.this, R.string.text_toast_signup_teacher_length_password, Toast.LENGTH_SHORT).show();
                     return;
                 }
-                if(password.equals(confirm_password)) {
+                if(!password.equals(confirm_password)) {
                     Toast.makeText(SignupTeacherActivity.this, R.string.text_toast_signup_teacher_confirm_password, Toast.LENGTH_SHORT).show();
                     return;
                 }
@@ -115,7 +115,7 @@ public class SignupTeacherActivity extends AppCompatActivity {
             .subscribe(id -> {
                 teacher.id = id;
                 AniclassSharedPref.signup(teacher);
-                startActivity(new Intent(SignupTeacherActivity.this, MainStudentActivity.class));
+                startActivity(new Intent(SignupTeacherActivity.this, ManagementTeacherActivity.class));
                 finish();
             } , error -> {
                 Log.i("TEST" , "error : " + error.getMessage());

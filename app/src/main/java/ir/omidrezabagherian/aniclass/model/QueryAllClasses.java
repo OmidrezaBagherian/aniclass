@@ -7,7 +7,7 @@ package ir.omidrezabagherian.aniclass.model;
 @email  hosseinzafari2000@gmail.com 
 */
 
-public class CustomClassItem {
+public class QueryAllClasses {
     public long id;
     public String code;
     public String name;

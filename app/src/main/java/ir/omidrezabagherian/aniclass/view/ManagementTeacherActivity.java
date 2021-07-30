@@ -4,25 +4,22 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.MenuItem;
-import android.widget.EditText;
-import android.widget.ImageView;
-import android.widget.Spinner;
 import android.widget.Toast;
+
+import com.google.android.material.navigation.NavigationView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
-import com.google.android.material.navigation.NavigationView;
-
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers;
-import io.reactivex.rxjava3.core.Observer;
-import io.reactivex.rxjava3.disposables.Disposable;
+import io.reactivex.rxjava3.disposables.CompositeDisposable;
 import io.reactivex.rxjava3.schedulers.Schedulers;
 import ir.omidrezabagherian.aniclass.R;
+import ir.omidrezabagherian.aniclass.adapter.ManagerClassItemAdapter;
 import ir.omidrezabagherian.aniclass.core.Base;
 import ir.omidrezabagherian.aniclass.local.shared_pref.AniclassSharedPref;
 
@@ -32,6 +29,8 @@ public class ManagementTeacherActivity extends AppCompatActivity {
     private DrawerLayout drawerLayoutManagementTeacher;
     private NavigationView navigationViewManagementTeacher;
     private RecyclerView recyclerViewManagementTeacherClasses;
+    private ManagerClassItemAdapter managerClassItemAdapter;
+    private CompositeDisposable compositeDisposable = new CompositeDisposable();
     private long currentId = -1;
 
     @Override
@@ -73,32 +72,61 @@ public class ManagementTeacherActivity extends AppCompatActivity {
                 return false;
             }
         });
-
-    }
     
-    private void setAdapter () {
+        managerClassItemAdapter = new ManagerClassItemAdapter(this , (v , item) -> {
+            startActivity(new Intent( ManagementTeacherActivity.this , DetailClassActivity.class));
+        } , (v , item) -> {
+            removeClass(item.id);
+        });
+        recyclerViewManagementTeacherClasses.setAdapter(managerClassItemAdapter);
+        recyclerViewManagementTeacherClasses.setLayoutManager(new LinearLayoutManager(this , RecyclerView.VERTICAL , false));
     }
 
-    private void getCreatedClassesByTeacher() {
-        Base.getDao().getCreatedClassesByTeacherId(currentId)
+    private void removeClass(Long classId) {
+        compositeDisposable.add(Base.getDao().deleteClassById(classId)
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe(item -> {
-                // set recylcerview adapter
-                setAdapter();
+                // refresh data
+                getCreatedClassesByTeacher();
+            } , error -> {
+                Toast.makeText(ManagementTeacherActivity.this , "خطا در حذف کلاس" , Toast.LENGTH_LONG).show();
+            }));
+    }
+    
+    private void getCreatedClassesByTeacher() {
+        compositeDisposable.add(Base.getDao().getCustomClassesItemByTeacherId(currentId)
+            .subscribeOn(Schedulers.io())
+            .observeOn(AndroidSchedulers.mainThread())
+            .subscribe(item -> {
+                // set data to adapter
+                managerClassItemAdapter.bindData(item);
             } , error -> {
                 Toast.makeText(ManagementTeacherActivity.this , "خطا در دریافت اطلاعات" , Toast.LENGTH_LONG).show();
-            });
+            }));
+    }
+    
+    @Override
+    protected void onResume() {
+        getCreatedClassesByTeacher();
+        super.onResume();
     }
     
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-
         switch (item.getItemId()) {
             case android.R.id.home:
                 drawerLayoutManagementTeacher.openDrawer(Gravity.RIGHT);
                 return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+    
+    
+    @Override
+    protected void onDestroy() {
+        compositeDisposable.clear();
+        compositeDisposable = null;
+        super.onDestroy();
     }
 }

@@ -22,11 +22,11 @@ import java.util.List;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import ir.omidrezabagherian.aniclass.R;
-import ir.omidrezabagherian.aniclass.model.CustomClassItem;
+import ir.omidrezabagherian.aniclass.model.QueryAllClasses;
 
 public class MainClassItemAdapter extends RecyclerView.Adapter<MainClassItemAdapter.MainClassItemAdapterHolder> {
     private ClassItemClick classItemClick;
-    private List<CustomClassItem> classItemEntityEntities = new ArrayList<>();
+    private List<QueryAllClasses> classItemEntityEntities = new ArrayList<>();
     private Activity mActivity;
     
     public MainClassItemAdapter(Activity activity, ClassItemClick classItemClick) {
@@ -34,7 +34,7 @@ public class MainClassItemAdapter extends RecyclerView.Adapter<MainClassItemAdap
         this.classItemClick = classItemClick;
     }
     
-    public void bindData(List<CustomClassItem> classItemEntityEntities) {
+    public void bindData(List<QueryAllClasses> classItemEntityEntities) {
         this.classItemEntityEntities.clear();
         this.classItemEntityEntities.addAll(classItemEntityEntities);
         notifyDataSetChanged();
@@ -54,7 +54,7 @@ public class MainClassItemAdapter extends RecyclerView.Adapter<MainClassItemAdap
     
     @Override
     public void onBindViewHolder(@NonNull @NotNull MainClassItemAdapterHolder holder, int position) {
-        CustomClassItem item = classItemEntityEntities.get(position);
+        QueryAllClasses item = classItemEntityEntities.get(position);
         
         holder.textview_cardlist_main_student_title.setText(item.name);
         holder.textview_cardlist_main_student_department.setText(item.department);
@@ -73,7 +73,7 @@ public class MainClassItemAdapter extends RecyclerView.Adapter<MainClassItemAdap
     
     
     public interface ClassItemClick {
-        void onClickListener(View v , CustomClassItem customClassItem);
+        void onClickListener(View v , QueryAllClasses queryAllClasses);
     }
     
     public class MainClassItemAdapterHolder extends RecyclerView.ViewHolder {
