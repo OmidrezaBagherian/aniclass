@@ -66,8 +66,8 @@ public class ManagementTeacherActivity extends AppCompatActivity {
                         startActivity(goToSetting);
                         break;
                     case R.id.item_menu_teacher_exit:
-                        //exit shared
-                        break;
+                        AniclassSharedPref.exit();
+                        startActivity(new Intent(ManagementTeacherActivity.this , LoginActivity.class));                        break;
                 }
                 return false;
             }

@@ -25,13 +25,15 @@ import ir.omidrezabagherian.aniclass.R;
 import ir.omidrezabagherian.aniclass.model.QueryAllClasses;
 
 public class MainClassItemAdapter extends RecyclerView.Adapter<MainClassItemAdapter.MainClassItemAdapterHolder> {
-    private ClassItemClick classItemClick;
+    private ClassItemClick infoItemClass;
+    private ClassItemClick followItemClass;
     private List<QueryAllClasses> classItemEntityEntities = new ArrayList<>();
     private Activity mActivity;
     
-    public MainClassItemAdapter(Activity activity, ClassItemClick classItemClick) {
+    public MainClassItemAdapter(Activity activity, ClassItemClick infoItemClass ,  ClassItemClick followItemClass) {
         mActivity = activity;
-        this.classItemClick = classItemClick;
+        this.infoItemClass = infoItemClass;
+        this.followItemClass = followItemClass;
     }
     
     public void bindData(List<QueryAllClasses> classItemEntityEntities) {
@@ -60,8 +62,13 @@ public class MainClassItemAdapter extends RecyclerView.Adapter<MainClassItemAdap
         holder.textview_cardlist_main_student_department.setText(item.department);
         holder.textview_cardlist_main_student_teacher_name.setText(item.teacher_name);
         holder.textview_cardlist_main_student_university.setText(item.university);
+        
         holder.button_cardlist_main_student_goto_details_page.setOnClickListener(v -> {
-            classItemClick.onClickListener(v , item);
+            infoItemClass.onClickListener(v , item);
+        });
+        
+        holder.button_cardlist_main_student_do_follow.setOnClickListener(v -> {
+            followItemClass.onClickListener(v , item);
         });
         
     }
@@ -82,6 +89,7 @@ public class MainClassItemAdapter extends RecyclerView.Adapter<MainClassItemAdap
         TextView textview_cardlist_main_student_teacher_name;
         TextView textview_cardlist_main_student_university;
         Button   button_cardlist_main_student_goto_details_page;
+        Button   button_cardlist_main_student_do_follow;
         
         public MainClassItemAdapterHolder(View view) {
             super(view);
@@ -94,6 +102,7 @@ public class MainClassItemAdapter extends RecyclerView.Adapter<MainClassItemAdap
             textview_cardlist_main_student_teacher_name = view.findViewById(R.id.textview_cardlist_main_student_teacher_name);
             textview_cardlist_main_student_university = view.findViewById(R.id.textview_cardlist_main_student_university);
             button_cardlist_main_student_goto_details_page = view.findViewById(R.id.button_cardlist_main_student_goto_details_page);
+            button_cardlist_main_student_do_follow = view.findViewById(R.id.button_cardlist_main_student_do_follow);
         }
         
     }

@@ -2,7 +2,6 @@ package ir.omidrezabagherian.aniclass.view;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.MenuItem;
 import android.widget.EditText;
@@ -25,6 +24,8 @@ import io.reactivex.rxjava3.schedulers.Schedulers;
 import ir.omidrezabagherian.aniclass.R;
 import ir.omidrezabagherian.aniclass.adapter.MainClassItemAdapter;
 import ir.omidrezabagherian.aniclass.core.Base;
+import ir.omidrezabagherian.aniclass.local.room.entity.FollowEntity;
+import ir.omidrezabagherian.aniclass.local.shared_pref.AniclassSharedPref;
 
 public class MainStudentActivity extends AppCompatActivity {
     
@@ -37,12 +38,14 @@ public class MainStudentActivity extends AppCompatActivity {
     private RecyclerView recyclerViewMainStudentClasses;
     private MainClassItemAdapter mainClassItemAdapter;
     private CompositeDisposable compositeDisposable = new CompositeDisposable();
+    private long currentId = -1;
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_student);
         
+        currentId = AniclassSharedPref.getCurrentId();
         toolbarMainStudent = (Toolbar) findViewById(R.id.toolbar_main_student);
         drawerLayoutMainStudent = (DrawerLayout) findViewById(R.id.drawerlayout_main_student);
         navigationViewMainStudent = (NavigationView) findViewById(R.id.navigationview_main_student);
@@ -69,6 +72,8 @@ public class MainStudentActivity extends AppCompatActivity {
             intent.putExtra("detail" , bundle);
     
             startActivity(intent);
+        }, (v , item) -> {
+            followClass(item.id);
         });
         
         recyclerViewMainStudentClasses.setAdapter(mainClassItemAdapter);
@@ -91,8 +96,8 @@ public class MainStudentActivity extends AppCompatActivity {
                         startActivity(goToSetting);
                         break;
                     case R.id.item_menu_student_exit:
-                        //exit shared
-                        break;
+                        AniclassSharedPref.exit();
+                        startActivity(new Intent(MainStudentActivity.this , LoginActivity.class));                        break;
                 }
                 return false;
             }
@@ -100,16 +105,28 @@ public class MainStudentActivity extends AppCompatActivity {
         
     }
     
+    private void followClass(long id) {
+        FollowEntity followEntity = new FollowEntity();
+        followEntity.classId = id ;
+        followEntity.userId = currentId ;
+        
+        compositeDisposable.add(Base.getDao().insertFollow(followEntity)
+            .subscribeOn(Schedulers.io())
+            .observeOn(AndroidSchedulers.mainThread())
+            .subscribe(list -> {
+                Toast.makeText(MainStudentActivity.this, "به علاقه مندی ها اضافه شد", Toast.LENGTH_LONG).show();
+            }, error -> {
+                Toast.makeText(MainStudentActivity.this, "مشکل در دریافت اطلاعات", Toast.LENGTH_LONG).show();
+            }));
+    }
     
     private void fetchData() {
         compositeDisposable.add(Base.getDao().getCustomClassesItem()
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe(list -> {
-                Log.i("TEST" , list.get(0).name);
                 mainClassItemAdapter.bindData(list);
             }, error -> {
-                Log.i("TEST" , error.getMessage());
                 Toast.makeText(MainStudentActivity.this, "مشکل در دریافت اطلاعات", Toast.LENGTH_LONG).show();
             }));
     }

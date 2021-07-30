@@ -18,6 +18,7 @@ import ir.omidrezabagherian.aniclass.local.room.entity.FollowEntity;
 import ir.omidrezabagherian.aniclass.local.room.entity.TeacherEntity;
 import ir.omidrezabagherian.aniclass.local.room.entity.UserEntity;
 import ir.omidrezabagherian.aniclass.model.QueryAllClasses;
+import ir.omidrezabagherian.aniclass.model.QueryFollowClasses;
 
 @Dao
 public interface AniClassDao {
@@ -33,6 +34,9 @@ public interface AniClassDao {
 
   @Query("SELECT * FROM follow_tb WHERE id=:followId")
   Observable<List<FollowEntity>> getFollowById(int followId);
+  
+  @RawQuery
+  Single<List<QueryFollowClasses>> getFollows(SupportSQLiteQuery supportSQLiteQuery);
 
   @Query("SELECT * FROM user_tb WHERE national_code=:national_code AND password=:password")
   Single<UserEntity> userLogin(String national_code , String password);
@@ -64,11 +68,14 @@ public interface AniClassDao {
   @Delete
   void deleteClass(ClassItemEntity classItemEntity);
   
+  @Query("DELETE FROM follow_tb WHERE follow_tb.id=:id")
+  Maybe<Integer> deleteFollow(long id);
+  
   @Query("DELETE FROM class_tb WHERE class_tb.id=:id")
   Maybe<Integer> deleteClassById(long id);
   
   @Insert(onConflict = OnConflictStrategy.IGNORE)
-  void insertFollow(FollowEntity... followEntities);
+  Maybe<Long> insertFollow(FollowEntity followEntities);
   
   @RawQuery
   Single<List<QueryAllClasses>> getClassesItemByTeacherId(SupportSQLiteQuery supportSQLiteQuery);
@@ -83,5 +90,11 @@ public interface AniClassDao {
   default Single<List<QueryAllClasses>> getCustomClassesItem() {
     String query = "SELECT class_tb.* , teacher_tb.name as teacher_name FROM class_tb JOIN teacher_tb ON class_tb.teacher_id=teacher_tb.id; ";
     return getClassesItem(new SimpleSQLiteQuery(query , new ClassItemEntity[0]));
+  }
+  
+  default Single<List<QueryFollowClasses>> getCustomFollow(long id) {
+    String query = "SELECT class_tb.* , follow_tb.id as followId FROM follow_tb JOIN class_tb ON follow_tb.class_id=class_tb.id " +
+        "WHERE follow_tb.user_id=:id; ";
+    return getFollows(new SimpleSQLiteQuery(query , new Long[]{id}));
   }
 }

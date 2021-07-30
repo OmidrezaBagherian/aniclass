@@ -14,13 +14,13 @@ import androidx.room.PrimaryKey;
 @Entity(tableName = "follow_tb")
 public class FollowEntity {
     @PrimaryKey(autoGenerate = true)
-    public int id;
+    public long id;
  
     @NonNull
     @ColumnInfo(name = "class_id")
-    public int classId;
+    public long classId;
  
     @NonNull
     @ColumnInfo(name = "user_id")
-    public int userId;
+    public long userId;
 }

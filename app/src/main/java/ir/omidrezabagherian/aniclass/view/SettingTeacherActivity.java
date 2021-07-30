@@ -1,13 +1,5 @@
 package ir.omidrezabagherian.aniclass.view;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-import androidx.drawerlayout.widget.DrawerLayout;
-
-import ir.omidrezabagherian.aniclass.R;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Gravity;
@@ -16,6 +8,14 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.google.android.material.navigation.NavigationView;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.drawerlayout.widget.DrawerLayout;
+import ir.omidrezabagherian.aniclass.R;
+import ir.omidrezabagherian.aniclass.local.shared_pref.AniclassSharedPref;
 
 public class SettingTeacherActivity extends AppCompatActivity {
 
@@ -71,7 +71,8 @@ public class SettingTeacherActivity extends AppCompatActivity {
                         drawerLayoutSettingTeacher.closeDrawers();
                         break;
                     case R.id.item_menu_teacher_exit:
-                        //exit shared
+                        AniclassSharedPref.exit();
+                        startActivity(new Intent(SettingTeacherActivity.this , LoginActivity.class));
                         break;
                 }
                 return false;

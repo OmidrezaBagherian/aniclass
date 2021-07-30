@@ -15,6 +15,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
 import ir.omidrezabagherian.aniclass.R;
+import ir.omidrezabagherian.aniclass.local.shared_pref.AniclassSharedPref;
 
 public class SettingStudentActivity extends AppCompatActivity {
 
@@ -70,8 +71,8 @@ public class SettingStudentActivity extends AppCompatActivity {
                         drawerLayoutSettingStudent.closeDrawers();
                         break;
                     case R.id.item_menu_student_exit:
-                        //exit shared
-                        break;
+                        AniclassSharedPref.exit();
+                        startActivity(new Intent(SettingStudentActivity.this , LoginActivity.class));                        break;
                 }
                 return false;
             }

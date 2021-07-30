@@ -57,6 +57,13 @@
             android:text="@string/text_cardlist_main_student_button_goto_details_page"
             android:textSize="16sp" />
 
+        <Button
+            android:id="@+id/button_cardlist_main_student_do_follow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="دنبال کردن"
+            android:textSize="16sp" />
+
     </LinearLayout>
 
 </androidx.cardview.widget.CardView>

@@ -102,8 +102,8 @@ public class CreateClassTeacherActivity extends AppCompatActivity {
                         startActivity(goToSetting);
                         break;
                     case R.id.item_menu_teacher_exit:
-                        //exit shared
-                        break;
+                        AniclassSharedPref.exit();
+                        startActivity(new Intent(CreateClassTeacherActivity.this , LoginActivity.class));                        break;
                 }
                 return false;
             }
