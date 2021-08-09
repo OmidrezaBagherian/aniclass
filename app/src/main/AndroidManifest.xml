@@ -3,35 +3,13 @@
     package="ir.omidrezabagherian.aniclass">
 
     <application
-        android:name="ir.omidrezabagherian.aniclass.core.Base"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AniClass">
-        <activity android:name=".view.DetailClassActivity">
 
-        </activity>
-        <activity android:name=".view.CreateClassTeacherActivity" />
-        <activity android:name=".view.SettingTeacherActivity" />
-        <activity android:name=".view.SettingStudentActivity" />
-        <activity android:name=".view.FollowedStudentActivity" />
-        <activity android:name=".view.MainStudentActivity" >
-
-        </activity>
-        <activity android:name=".view.ManagementTeacherActivity" >
-
-        </activity>
-        <activity android:name=".view.SignupTeacherActivity" />
-        <activity android:name=".view.SignupStudentActivity" />
-        <activity android:name=".view.LoginActivity" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
     </application>
 
 </manifest>
