@@ -1,4 +1,38 @@
 <resources>
     <!-- application name -->
     <string name="app_name">آنی کلاس</string>
+    <!-- texts splash page -->
+    <string name="text_login_textview_name">آنی کلاس</string>
+    <string name="text_login_textview_about">سامانه هوشمند مدیریت کلاس آنلاین</string>
+    <!-- texts login page -->
+    <string name="text_login_toolbar_title">ورود</string>
+    <string name="text_login_edittext_hint_username">کدملی</string>
+    <string name="text_login_edittext_hint_password">رمز عبور</string>
+    <string name="text_login_textview_forget_password">رمز عبور را فراموش کردم</string>
+    <string name="text_login_button_login">ورود به سامانه</string>
+    <string name="text_login_textview_or">یا</string>
+    <string name="text_login_textview_signup">ثبت نام</string>
+    <string name="text_login_toast_is_empty">لطفاً فیلد های موجود را کنید</string>
+    <string name="text_login_toast_signup">این کدملی ثبت نام نکرده اید</string>
+    <!-- text signup page -->
+    <string name="text_signup_toolbar_title">ثبت نام</string>
+    <string name="text_signup_edittext_hint_name">نام</string>
+    <string name="text_signup_edittext_hint_family">نام خانوادگی</string>
+    <string name="text_signup_edittext_hint_nationalcode">کدملی</string>
+    <string name="text_signup_edittext_hint_studentcode_or_teachercode">کد دانشجویی یا کد استادی</string>
+    <string name="text_signup_edittext_hint_email">ایمیل</string>
+    <string name="text_signup_edittext_hint_password">رمز عبور</string>
+    <string name="text_signup_edittext_hint_confirm_password">تکرار رمز عبور</string>
+    <string name="text_signup_edittext_hint_security_question">سوال امنیتی (نام اولین معلم یا دوست صمیمی)</string>
+    <string name="text_signup_edittext_hint_signup_teachercode">کد ثبت نام (مخصوص استادان)</string>
+    <string name="text_signup_button_signup">ثبت نام کاربر</string>
+    <string name="text_signup_toast_name_and_family_is_empty">نام یا نام خانوادگی خود را درست کنید</string>
+    <string name="text_signup_toast_email_is_available">ایمیل وارد شده تکرار هست</string>
+    <string name="text_signup_toast_email_is_empty">ایمیل خود را درست کنید</string>
+    <string name="text_signup_toast_nationalcode_is_available">کدملی وارد شده تکرار هست</string>
+    <string name="text_signup_toast_nationalcode_is_empty">کدملی خود را درست کنید</string>
+    <string name="text_signup_toast_password_length">تعداد کاراکتر رمز عبور کم هست</string>
+    <string name="text_signup_toast_password_check">رمز عبور با تکرارش یکسان نیست</string>
+    <string name="text_signup_toast_security_quest_length">سوال امینتی را درست وارد کنید</string>
+    <string name="text_signup_toast_signup_teachercode">کد ثبت نام را درست وارد کنید</string>
 </resources>
