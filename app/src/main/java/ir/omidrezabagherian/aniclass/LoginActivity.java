@@ -51,7 +51,8 @@ public class LoginActivity extends AppCompatActivity {
      * method forget password
      */
     private void forgetPassword() {
-
+        Intent forgetPage = new Intent(LoginActivity.this, ForgetActivity.class);
+        startActivity(forgetPage);
     }
 
     /**

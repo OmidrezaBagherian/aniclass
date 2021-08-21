@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ForgetActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_forget"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/iransans_bold"
+            android:text="@string/text_forget_toolbar_title"
+            android:textAlignment="center"
+            android:textSize="18sp" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textinput_layout_forget_nationalcode"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_forget">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textinput_edittext_forget_nationalcode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/iransans_regular"
+            android:hint="@string/text_forget_edittext_hint_nationalcode"
+            android:inputType="number"
+            android:maxLength="10"
+            android:textAlignment="center"
+            android:textSize="16sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textinput_layout_forget_email"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textinput_layout_forget_nationalcode">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textinput_edittext_forget_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/iransans_regular"
+            android:hint="@string/text_forget_edittext_hint_email"
+            android:inputType="textEmailAddress"
+            android:textAlignment="center"
+            android:textSize="16sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textinput_layout_forget_security_question"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textinput_layout_forget_email">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textinput_edittext_forget_security_question"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/iransans_regular"
+            android:hint="@string/text_forget_edittext_hint_security_question"
+            android:inputType="textPassword"
+            android:textAlignment="center"
+            android:textSize="16sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/button_forget_check_information"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:fontFamily="@font/iransans_regular"
+        android:text="@string/text_forget_button_check_information"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textinput_layout_forget_security_question" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
