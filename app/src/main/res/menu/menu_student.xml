@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_student_profile"
+        android:icon="@drawable/ic_round_account"
+        android:title="@string/text_menu_student_my_profile"/>
+    <item
+        android:id="@+id/menu_student_homework"
+        android:icon="@drawable/ic_round_homework"
+        android:title="@string/text_menu_student_my_homework"/>
+    <item
+        android:id="@+id/menu_student_classes"
+        android:icon="@drawable/ic_round_classes"
+        android:title="@string/text_menu_student_my_classes"/>
+    <item
+        android:id="@+id/menu_student_search"
+        android:icon="@drawable/ic_round_search"
+        android:title="@string/text_menu_student_my_search"/>
+</menu>

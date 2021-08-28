@@ -38,13 +38,13 @@ public class ForgetActivity extends AppCompatActivity {
 
 
         if (nationalCode.equals("2080990081") && email.equals("Omidreza@gmail.com") && securityQuestion.equals("Mahdiyeh")) {
-            openDialog();
+            dialogForget();
         } else {
             Toast.makeText(this, R.string.text_forget_toast_information_is_empty, Toast.LENGTH_SHORT).show();
         }
     }
 
-    private void openDialog(){
+    private void dialogForget(){
         AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(ForgetActivity.this);
         View dialogView = getLayoutInflater().inflate(R.layout.dialog_forget_password, null);
         textInputEditTextDialogForgetNewPassword = (TextInputEditText) dialogView.findViewById(R.id.textinput_edittext_dialog_forget_new_password);

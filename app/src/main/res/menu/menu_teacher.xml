@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_teacher_profile"
+        android:icon="@drawable/ic_round_account"
+        android:title="@string/text_menu_teacher_my_profile" />
+    <item
+        android:id="@+id/menu_teacher_management_homework"
+        android:icon="@drawable/ic_round_homework"
+        android:title="@string/text_menu_teacher_management_homework" />
+    <item
+        android:id="@+id/menu_teacher_management_class"
+        android:icon="@drawable/ic_round_classes"
+        android:title="@string/text_menu_teacher_management_classes" />
+</menu>

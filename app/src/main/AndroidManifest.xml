@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AniClass">
         <activity
+            android:name=".TeacherActivity"
+            android:exported="true" />
+        <activity
+            android:name=".StudentActivity"
+            android:exported="true" />
+        <activity
             android:name=".ForgetActivity"
             android:exported="true" />
         <activity

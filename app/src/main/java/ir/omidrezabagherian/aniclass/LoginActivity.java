@@ -37,8 +37,6 @@ public class LoginActivity extends AppCompatActivity {
         textViewLoginSignUp = (TextView) findViewById(R.id.textview_login_signup);
         buttonLoginLogin = (Button) findViewById(R.id.button_login_login);
 
-
-
         textViewLoginForgetPassword.setOnClickListener(v -> forgetPassword());
 
         buttonLoginLogin.setOnClickListener(v -> login());
@@ -68,9 +66,13 @@ public class LoginActivity extends AppCompatActivity {
         }
 
         if (username.equals(listTeacher[0]) && password.equals(listTeacher[1])) {
-            Toast.makeText(this, "استاد", Toast.LENGTH_SHORT).show();
+            Intent teacherPage = new Intent(LoginActivity.this, TeacherActivity.class);
+            startActivity(teacherPage);
+            finish();
         } else if (username.equals(listStudent[0]) && password.equals(listStudent[1])) {
-            Toast.makeText(this, "دانشجو", Toast.LENGTH_SHORT).show();
+            Intent studentPage = new Intent(LoginActivity.this, StudentActivity.class);
+            startActivity(studentPage);
+            finish();
         } else {
             Toast.makeText(this, R.string.text_login_toast_signup, Toast.LENGTH_SHORT).show();
             return;

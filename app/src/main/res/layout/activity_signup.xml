@@ -4,14 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layoutDirection="rtl"
+    android:layoutDirection="ltr"
     tools:context=".SignUpActivity">
 
-    <androidx.appcompat.widget.Toolbar
+    <androidx.cardview.widget.CardView
         android:id="@+id/toolbar_signup"
         android:layout_width="match_parent"
         android:layout_height="55dp"
-        android:background="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -25,7 +24,7 @@
             android:textAlignment="center"
             android:textSize="18sp" />
 
-    </androidx.appcompat.widget.Toolbar>
+    </androidx.cardview.widget.CardView>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"

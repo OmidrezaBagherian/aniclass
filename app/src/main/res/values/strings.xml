@@ -50,5 +50,41 @@
     <string name="text_dialog_forget_toast_password_length">تعداد کاراکتر رمز عبور کم هست</string>
     <string name="text_dialog_forget_toast_password_check">رمز عبور با تکرارش یکسان نیست</string>
     <string name="text_dialog_forget_toast_change_password">رمز عبور تغییر کرد</string>
+    <!-- text menu student -->
+    <string name="text_menu_student_my_profile">پروفایل من</string>
+    <string name="text_menu_student_my_homework">تکلیف های من</string>
+    <string name="text_menu_student_my_classes">کلاس های من</string>
+    <string name="text_menu_student_my_search">جستجو</string>
+    <!-- text menu teacher -->
+    <string name="text_menu_teacher_my_profile">پروفایل من</string>
+    <string name="text_menu_teacher_management_homework">مدیریت تکالیف</string>
+    <string name="text_menu_teacher_management_classes">مدیریت کلاس ها</string>
+    <!-- text profile student -->
+    <string name="text_profile_student_toolbar_title">پروفایل من</string>
+    <string name="text_profile_student_textview_name_and_family">امیدرضا باقریان اسفندانی</string>
+    <string name="text_profile_student_textview_email">Omidreza@gmail.com</string>
+    <string name="text_profile_student_textview_search_class">جستجوی کلاس</string>
+    <string name="text_profile_student_textview_my_classes">کلاس های من</string>
+    <string name="text_profile_student_textview_my_sessions">تکلیف های من</string>
+    <string name="text_profile_student_textview_setting">تنظیمات</string>
+    <string name="text_profile_student_textview_exit">خروج</string>
+    <!-- text homework student -->
+    <string name="text_homework_student_toolbar_title">تکلیف های من</string>
+    <string name="text_homework_student_textview_coming_soon">بزودی</string>
+    <!-- text search class student -->
+    <string name="text_search_class_student_edittext_hint_search">جستجو کنید</string>
+    <!-- text filter search class student -->
+    <string name="text_filter_search_student_toolbar_title">جستجوی پیشرفته</string>
+    <string name="text_filter_search_student_edittext_hint_class_code">کد کلاس</string>
+    <string name="text_filter_search_student_edittext_hint_city">استان</string>
+    <string name="text_filter_search_student_edittext_hint_department">دپارتمان</string>
+    <string name="text_filter_search_student_edittext_hint_university">دانشگاه</string>
+    <string name="text_dialog_filter_search_student_title">جستجو بر اساس کد کلاس</string>
+    <string name="text_dialog_filter_search_student_edittext_hint_class_code">کد کلاس</string>
+    <string name="text_dialog_filter_search_student_button_apply">اعمال</string>
+    <string name="text_dialog_filter_search_student_button_cancel">انصراف</string>
+    <string name="text_toast_filter_search_student_class_code_is_empty">کد کلاس خود را درست وارد کنید</string>
+
+
 
 </resources>

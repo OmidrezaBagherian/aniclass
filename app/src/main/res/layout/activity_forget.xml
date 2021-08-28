@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layoutDirection="ltr"
     tools:context=".ForgetActivity">
 
-    <androidx.appcompat.widget.Toolbar
+    <androidx.cardview.widget.CardView
         android:id="@+id/toolbar_forget"
         android:layout_width="match_parent"
         android:layout_height="55dp"
-        android:background="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -24,7 +24,7 @@
             android:textAlignment="center"
             android:textSize="18sp" />
 
-    </androidx.appcompat.widget.Toolbar>
+    </androidx.cardview.widget.CardView>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textinput_layout_forget_nationalcode"
