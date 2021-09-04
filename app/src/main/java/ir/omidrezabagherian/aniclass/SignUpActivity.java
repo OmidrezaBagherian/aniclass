@@ -64,7 +64,7 @@ public class SignUpActivity extends AppCompatActivity {
             return;
         }
         if (email.equals("")) {
-            Toast.makeText(SignUpActivity.this, R.string.text_signup_toast_email_is_empty, Toast.LENGTH_SHORT).show();
+            Toast.makeText(SignUpActivity.this, R.string.text_signup_toast_email_is_available, Toast.LENGTH_SHORT).show();
             return;
         }
         if (password.length() <= 7) {

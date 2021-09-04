@@ -5,10 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layoutDirection="ltr"
-    tools:context=".FilterSearchFragment">
+    tools:context=".SettingStudentFragment">
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/toolbar_filter_search_student"
+        android:id="@+id/toolbar_setting_student"
         android:layout_width="match_parent"
         android:layout_height="55dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -20,23 +20,23 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:fontFamily="@font/iransans_bold"
-            android:text="@string/text_filter_search_student_toolbar_title"
+            android:text="@string/text_setting_toolbar_title"
             android:textAlignment="center"
             android:textSize="18sp" />
 
     </androidx.cardview.widget.CardView>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintlayout_class_code"
+        android:id="@+id/constraintlayout_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar_filter_search_student">
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_setting_student">
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textinput_layout_filter_search_text_class_code"
+            android:id="@+id/textinput_layout_setting_student_text_name"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -49,19 +49,19 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/textinput_edittext_filter_search_text_class_code"
+                android:id="@+id/textinput_edittext_setting_student_text_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/iransans_regular"
                 android:gravity="center"
                 android:enabled="false"
-                android:hint="@string/text_filter_search_student_edittext_hint_class_code"
+                android:hint="@string/text_setting_edittext_hint_name"
                 android:inputType="text" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
         <ImageView
-            android:id="@+id/imageview_filter_search_edit_class_code"
+            android:id="@+id/imageview_setting_student_edit_name"
             android:layout_width="42dp"
             android:layout_height="42dp"
             android:layout_marginLeft="24dp"
@@ -73,16 +73,16 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintlayout_city"
+        android:id="@+id/constraintlayout_family"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintlayout_class_code">
+        app:layout_constraintTop_toBottomOf="@+id/constraintlayout_name">
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textinput_layout_filter_search_text_city"
+            android:id="@+id/textinput_layout_setting_student_text_family"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -95,19 +95,19 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/textinput_edittext_filter_search_text_city"
+                android:id="@+id/textinput_edittext_setting_student_text_family"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/iransans_regular"
                 android:gravity="center"
                 android:enabled="false"
-                android:hint="@string/text_filter_search_student_edittext_hint_city"
+                android:hint="@string/text_setting_edittext_hint_family"
                 android:inputType="text" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
         <ImageView
-            android:id="@+id/imageview_filter_search_edit_city"
+            android:id="@+id/imageview_setting_student_edit_family"
             android:layout_width="42dp"
             android:layout_height="42dp"
             android:layout_marginLeft="24dp"
@@ -119,16 +119,16 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintlayout_department"
+        android:id="@+id/constraintlayout_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintlayout_city">
+        app:layout_constraintTop_toBottomOf="@+id/constraintlayout_family">
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textinput_layout_filter_search_text_department"
+            android:id="@+id/textinput_layout_setting_student_text_email"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -141,19 +141,19 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/textinput_edittext_filter_search_text_department"
+                android:id="@+id/textinput_edittext_setting_student_text_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/iransans_regular"
                 android:gravity="center"
                 android:enabled="false"
-                android:hint="@string/text_filter_search_student_edittext_hint_department"
+                android:hint="@string/text_setting_edittext_hint_email"
                 android:inputType="text" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
         <ImageView
-            android:id="@+id/imageview_filter_search_edit_department"
+            android:id="@+id/imageview_setting_student_edit_email"
             android:layout_width="42dp"
             android:layout_height="42dp"
             android:layout_marginLeft="24dp"
@@ -165,16 +165,16 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintlayout_university"
+        android:id="@+id/constraintlayout_nationalcode"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintlayout_department">
+        app:layout_constraintTop_toBottomOf="@+id/constraintlayout_email">
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textinput_layout_filter_search_text_university"
+            android:id="@+id/textinput_layout_setting_student_text_nationalcode"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -187,19 +187,19 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/textinput_edittext_filter_search_text_university"
+                android:id="@+id/textinput_edittext_setting_student_text_nationalcode"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/iransans_regular"
                 android:gravity="center"
                 android:enabled="false"
-                android:hint="@string/text_filter_search_student_edittext_hint_university"
+                android:hint="@string/text_setting_edittext_hint_nationalcode"
                 android:inputType="text" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
         <ImageView
-            android:id="@+id/imageview_filter_search_edit_university"
+            android:id="@+id/imageview_setting_student_edit_nationalcode"
             android:layout_width="42dp"
             android:layout_height="42dp"
             android:layout_marginLeft="24dp"
@@ -209,5 +209,63 @@
             app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintlayout_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintlayout_nationalcode">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textinput_layout_setting_student_text_password"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            app:hintEnabled="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/textinput_edittext_setting_student_text_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/iransans_regular"
+                android:gravity="center"
+                android:enabled="false"
+                android:hint="@string/text_setting_edittext_hint_password"
+                android:inputType="textPassword" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <ImageView
+            android:id="@+id/imageview_setting_student_edit_password"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_marginLeft="24dp"
+            android:src="@drawable/ic_round_edit"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/button_student_send_edit"
+        android:layout_margin="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:fontFamily="@font/iransans_bold"
+        android:textSize="18sp"
+        android:text="@string/text_setting_button_send_edit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

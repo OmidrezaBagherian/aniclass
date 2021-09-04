@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layoutDirection="ltr"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginTop="8dp"
+    app:cardCornerRadius="10dp"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:padding="8dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:gravity="right"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/my_class_lesson_code"
+                android:layout_width="wrap_content"
+                android:textSize="20sp"
+                android:text="تست"
+                android:fontFamily="@font/iransans_bold"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:textSize="20sp"
+                android:layout_marginRight="4dp"
+                android:layout_marginLeft="4dp"
+                android:text="@string/text_cardview_my_class_student_lesson_title_dash"
+                android:fontFamily="@font/iransans_bold"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_marginRight="4dp"
+                android:id="@+id/my_class_lesson_title"
+                android:layout_width="wrap_content"
+                android:textSize="20sp"
+                android:text="تست"
+                android:fontFamily="@font/iransans_bold"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:textSize="20sp"
+                android:text="@string/text_cardview_my_class_student_lesson_title"
+                android:fontFamily="@font/iransans_bold"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="right"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_marginRight="4dp"
+                android:id="@+id/my_class_name_teacher"
+                android:layout_width="wrap_content"
+                android:textSize="20sp"
+                android:text="تست"
+                android:fontFamily="@font/iransans_regular"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_marginRight="36dp"
+                android:layout_width="wrap_content"
+                android:textSize="20sp"
+                android:text="@string/text_cardview_my_class_student_name_teacher"
+                android:fontFamily="@font/iransans_regular"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_marginRight="4dp"
+                android:id="@+id/my_class_name_department"
+                android:layout_width="wrap_content"
+                android:textSize="20sp"
+                android:text="تست"
+                android:fontFamily="@font/iransans_regular"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:textSize="20sp"
+                android:text="@string/text_cardview_my_class_student_department_title"
+                android:fontFamily="@font/iransans_regular"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="right"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_marginRight="4dp"
+                android:id="@+id/my_class_name_university"
+                android:layout_width="wrap_content"
+                android:textSize="20sp"
+                android:text="تست"
+                android:fontFamily="@font/iransans_regular"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:textSize="20sp"
+                android:text="@string/text_cardview_my_class_student_name_university"
+                android:fontFamily="@font/iransans_regular"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_marginTop="4dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/my_class_remove_class"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/iransans_regular"
+                android:text="@string/text_cardview_my_class_student_remove_class"
+                android:textSize="18sp" />
+
+            <View
+                android:layout_width="12dp"
+                android:layout_height="match_parent" />
+
+            <Button
+                android:id="@+id/my_class_show_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/iransans_regular"
+                android:text="@string/text_cardview_my_class_student_show_detail"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

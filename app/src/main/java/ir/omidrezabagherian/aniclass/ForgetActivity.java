@@ -35,8 +35,6 @@ public class ForgetActivity extends AppCompatActivity {
         String email = textInputEditTextForgetEmail.getText().toString();
         String securityQuestion = textInputEditTextForgetSecurityQuestion.getText().toString();
 
-
-
         if (nationalCode.equals("2080990081") && email.equals("Omidreza@gmail.com") && securityQuestion.equals("Mahdiyeh")) {
             dialogForget();
         } else {
@@ -85,6 +83,8 @@ public class ForgetActivity extends AppCompatActivity {
 
             }
         });
+
+
 
     }
 

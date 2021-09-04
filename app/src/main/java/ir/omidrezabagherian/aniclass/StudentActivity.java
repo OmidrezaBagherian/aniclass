@@ -13,18 +13,18 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class StudentActivity extends AppCompatActivity {
 
-    private BottomNavigationView bottomNavigationView;
+    private BottomNavigationView bottomNavigationViewStudent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_student);
 
-        bottomNavigationView = findViewById(R.id.bottom_navigation_student);
+        bottomNavigationViewStudent = findViewById(R.id.bottom_navigation_student);
 
         getSupportFragmentManager().beginTransaction().replace(R.id.framelayout_student,new ProfileStudentFragment()).commit();
 
-        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+        bottomNavigationViewStudent.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 Fragment selectedFragment = null;
@@ -37,7 +37,7 @@ public class StudentActivity extends AppCompatActivity {
                         selectedFragment = new HomeWorkFragment();
                         break;
                     case R.id.menu_student_classes:
-                        Toast.makeText(StudentActivity.this, R.string.text_menu_student_my_classes, Toast.LENGTH_SHORT).show();
+                        selectedFragment = new MyClassFragment();
                         break;
                     case R.id.menu_student_search:
                         selectedFragment = new SearchClassFragment();

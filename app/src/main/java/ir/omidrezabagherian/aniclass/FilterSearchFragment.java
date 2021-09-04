@@ -10,15 +10,52 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputEditText;
 
 public class FilterSearchFragment extends Fragment {
 
-    private TextInputEditText textInputEditTextFilterClassClassCode, textInputEditTextFilterClassCity, textInputEditTextFilterClassDepartment, textInputEditTextFilterClassUniversity, textInputEditTextDialogFilterClassClassCode;
+    public TextInputEditText textInputEditTextFilterClassClassCode, textInputEditTextFilterClassCity, textInputEditTextFilterClassDepartment, textInputEditTextFilterClassUniversity;
+    private TextInputEditText textInputEditTextDialogFilterClassClassCode;
     private ImageView imageViewFilterClassClassCode, imageViewFilterClassCity, imageViewFilterClassDepartment, imageViewFilterClassUniversity;
     private Button buttonDialogFilterClassApply, buttonDialogFilterClassCancel;
+
+    private String city[] = {
+            "آذربایجان شرقی",
+            "آذربایجان شرقی",
+            "اردبیل",
+            "اصفهان",
+            "البرز",
+            "ایلام",
+            "بوشهر",
+            "تهران",
+            "چهارمحال و بختیاری",
+            "خراسان جنوبی",
+            "خراسان رضوی",
+            "خراسان شمالی",
+            "خوزستان",
+            "زنجان",
+            "سمنان",
+            "سیستان و بلوچستان",
+            "فارس",
+            "قزوین",
+            "قم",
+            "کردستان",
+            "کرمان",
+            "کرمانشاه",
+            "کهگیلویه و بویراحمد",
+            "گلستان",
+            "گیلان",
+            "لرستان",
+            "مازندران",
+            "مرکزی",
+            "هرمزگان",
+            "همدان",
+            "یزد",
+            ""
+    };
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -62,7 +99,6 @@ public class FilterSearchFragment extends Fragment {
     }
 
     private void dialogClassCode() {
-
         AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(getActivity());
         View dialogView = getLayoutInflater().inflate(R.layout.dialog_filter_search_class_code, null);
         textInputEditTextDialogFilterClassClassCode = dialogView.findViewById(R.id.textinput_edittext_dialog_filter_search_class_code_text);

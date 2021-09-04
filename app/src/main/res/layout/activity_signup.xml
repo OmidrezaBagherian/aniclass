@@ -169,7 +169,7 @@
                         android:fontFamily="@font/iransans_regular"
                         android:hint="@string/text_signup_edittext_hint_confirm_password"
                         android:maxLength="64"
-                        android:inputType="number"
+                        android:inputType="textPassword"
                         android:textAlignment="center" />
 
                 </com.google.android.material.textfield.TextInputLayout>

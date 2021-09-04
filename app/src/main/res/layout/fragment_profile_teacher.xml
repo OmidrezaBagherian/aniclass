@@ -3,12 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layoutDirection="ltr"
     android:layout_height="match_parent"
-    tools:context=".ProfileStudentFragment">
+    android:layoutDirection="ltr"
+    tools:context=".ProfileTeacherFragment">
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/toolbar_profile_student"
+        android:id="@+id/toolbar_profile_teacher"
         android:layout_width="match_parent"
         android:layout_height="55dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -20,14 +20,14 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:fontFamily="@font/iransans_bold"
-            android:text="@string/text_profile_student_toolbar_title"
+            android:text="@string/text_profile_teacher_toolbar_title"
             android:textAlignment="center"
             android:textSize="18sp" />
 
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cardview_profile_student_information"
+        android:id="@+id/cardview_profile_teacher_information"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="8dp"
@@ -36,7 +36,7 @@
         app:cardCornerRadius="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar_profile_student">
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_profile_teacher">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -44,7 +44,7 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textview_profile_student_name"
+                android:id="@+id/textview_profile_teacher_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
@@ -55,7 +55,7 @@
                 android:textSize="22sp" />
 
             <TextView
-                android:id="@+id/textview_profile_student_email"
+                android:id="@+id/textview_profile_teacher_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
@@ -68,30 +68,7 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cardview_profile_student_search_class"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginRight="8dp"
-        app:cardCornerRadius="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardview_profile_student_information">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="right"
-            android:layout_margin="8dp"
-            android:fontFamily="@font/iransans_bold"
-            android:text="@string/text_profile_student_textview_search_class"
-            android:textSize="18sp" />
-
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardview_profile_student_my_classes"
+        android:id="@+id/cardview_profile_teacher_management_class"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="8dp"
@@ -100,7 +77,7 @@
         app:cardCornerRadius="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardview_profile_student_search_class">
+        app:layout_constraintTop_toBottomOf="@+id/cardview_profile_teacher_information">
 
         <TextView
             android:layout_width="wrap_content"
@@ -108,13 +85,13 @@
             android:layout_gravity="right"
             android:layout_margin="8dp"
             android:fontFamily="@font/iransans_bold"
-            android:text="@string/text_profile_student_textview_my_classes"
+            android:text="@string/text_profile_teacher_textview_management_class"
             android:textSize="18sp" />
 
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cardview_profile_student_my_homework"
+        android:id="@+id/cardview_profile_teacher_management_homework"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="8dp"
@@ -123,7 +100,7 @@
         app:cardCornerRadius="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardview_profile_student_my_classes">
+        app:layout_constraintTop_toBottomOf="@+id/cardview_profile_teacher_management_class">
 
         <TextView
             android:layout_width="wrap_content"
@@ -131,13 +108,13 @@
             android:layout_gravity="right"
             android:layout_margin="8dp"
             android:fontFamily="@font/iransans_bold"
-            android:text="@string/text_profile_student_textview_my_sessions"
+            android:text="@string/text_profile_teacher_textview_management_homework"
             android:textSize="18sp" />
 
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cardview_profile_student_setting"
+        android:id="@+id/cardview_profile_teacher_management_university"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="8dp"
@@ -146,7 +123,7 @@
         app:cardCornerRadius="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardview_profile_student_my_homework">
+        app:layout_constraintTop_toBottomOf="@+id/cardview_profile_teacher_management_homework">
 
         <TextView
             android:layout_width="wrap_content"
@@ -154,13 +131,13 @@
             android:layout_gravity="right"
             android:layout_margin="8dp"
             android:fontFamily="@font/iransans_bold"
-            android:text="@string/text_profile_student_textview_setting"
+            android:text="@string/text_profile_teacher_textview_management_university"
             android:textSize="18sp" />
 
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cardview_profile_student_exit"
+        android:id="@+id/cardview_profile_teacher_management_department"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="8dp"
@@ -169,7 +146,7 @@
         app:cardCornerRadius="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardview_profile_student_setting">
+        app:layout_constraintTop_toBottomOf="@+id/cardview_profile_teacher_management_university">
 
         <TextView
             android:layout_width="wrap_content"
@@ -177,7 +154,53 @@
             android:layout_gravity="right"
             android:layout_margin="8dp"
             android:fontFamily="@font/iransans_bold"
-            android:text="@string/text_profile_student_textview_exit"
+            android:text="@string/text_profile_teacher_textview_management_department"
+            android:textSize="18sp" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview_profile_teacher_setting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="8dp"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardview_profile_teacher_management_department">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_margin="8dp"
+            android:fontFamily="@font/iransans_bold"
+            android:text="@string/text_profile_teacher_textview_setting"
+            android:textSize="18sp" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview_profile_teacher_exit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="8dp"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardview_profile_teacher_setting">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_margin="8dp"
+            android:fontFamily="@font/iransans_bold"
+            android:text="@string/text_profile_teacher_textview_exit"
             android:textSize="18sp" />
 
     </androidx.cardview.widget.CardView>
