@@ -125,7 +125,6 @@
     <string name="text_cardview_my_class_student_department_title">عنوان دپارتمان:</string>
     <string name="text_cardview_my_class_student_name_teacher">مدرس:</string>
     <string name="text_cardview_my_class_student_name_university">دانشگاه:</string>
-    <string name="text_cardview_my_class_student_about_class">دانشگاه:</string>
     <string name="text_cardview_my_class_student_show_detail">نمایش جزئیات</string>
     <string name="text_cardview_my_class_student_remove_class">حذف کردن کلاس</string>
     <!-- text setting student -->
@@ -194,4 +193,59 @@
     <string name="text_dialog_add_department_button_apply">بررسی کد</string>
     <string name="text_dialog_add_department_button_cancel">انصراف</string>
     <string name="text_dialog_add_department_is_empty">کد ثبت نام دپارتمان را درست وارد کنید</string>
+    <!-- text cardview management class teacher -->
+    <string name="text_cardview_management_class_teacher_lesson_title">عنوان درس:</string>
+    <string name="text_cardview_management_class_teacher_lesson_title_dash">-</string>
+    <string name="text_cardview_management_class_teacher_department_title">عنوان دپارتمان:</string>
+    <string name="text_cardview_management_class_teacher_name_teacher">مدرس:</string>
+    <string name="text_cardview_management_class_teacher_name_university">دانشگاه:</string>
+    <string name="text_cardview_management_class_teacher_about_class">توضیحات:</string>
+    <string name="text_cardview_management_class_teacher_management_session">مدیریت جلسات</string>
+    <string name="text_cardview_management_class_teacher_delete_class">حذف</string>
+    <string name="text_cardview_management_class_teacher_edit_class">ویرایش</string>
+    <!-- text add class teacher -->
+    <string name="text_add_class_teacher_toolbar_title">ایجاد کلاس</string>
+    <string name="text_add_class_teacher_edittext_hint_lesson_name">نام درس</string>
+    <string name="text_add_class_teacher_edittext_hint_university_name">نام دانشگاه</string>
+    <string name="text_add_class_teacher_edittext_hint_department_name">نام دپارتمان</string>
+    <string name="text_add_class_teacher_edittext_hint_class_about">توضیحات</string>
+    <string name="text_add_class_teacher_checkbox_set_password_text">اعمال رمزعبور بر کلاس</string>
+    <string name="text_add_class_teacher_edittext_hint_class_password">رمزعبور</string>
+    <string name="text_add_class_teacher_edittext_hint_class_confirm_password">تکرار رمزعبور</string>
+    <string name="text_add_class_teacher_button_add_class">ایجاد</string>
+    <!-- text edit class teacher -->
+    <string name="text_edit_class_teacher_toolbar_title">ویرایش کلاس</string>
+    <string name="text_edit_class_teacher_edittext_hint_lesson_name">نام درس</string>
+    <string name="text_edit_class_teacher_edittext_hint_university_name">نام دانشگاه</string>
+    <string name="text_edit_class_teacher_edittext_hint_department_name">نام دپارتمان</string>
+    <string name="text_edit_class_teacher_edittext_hint_class_about">توضیحات</string>
+    <string name="text_edit_class_teacher_checkbox_set_password_text">اعمال رمزعبور بر کلاس</string>
+    <string name="text_edit_class_teacher_edittext_hint_class_password">رمزعبور</string>
+    <string name="text_edit_class_teacher_edittext_hint_class_confirm_password">تکرار رمزعبور</string>
+    <string name="text_edit_class_teacher_button_edit_class">ویرایش</string>
+    <!-- text management session teacher -->
+    <string name="text_management_session_teacher_toolbar_title">مدیریت جلسات</string>
+    <!-- text cardview management session teacher -->
+    <string name="text_cardview_management_session_teacher_session_title">عنوان جلسه:</string>
+    <string name="text_cardview_management_session_teacher_lesson_title">عنوان درس:</string>
+    <string name="text_cardview_management_session_teacher_lesson_title_dash">-</string>
+    <string name="text_cardview_management_session_teacher_department_title">عنوان دپارتمان:</string>
+    <string name="text_cardview_management_session_teacher_name_teacher">مدرس:</string>
+    <string name="text_cardview_management_session_teacher_name_university">دانشگاه:</string>
+    <string name="text_cardview_management_session_teacher_edit_session">ویرایش</string>
+    <string name="text_cardview_management_session_teacher_remove_session">حذف</string>
+    <!-- text my session teacher -->
+    <string name="text_my_session_teacher_toolbar_title">جلسات کلاس</string>
+    <!-- text cardview my session teacher -->
+    <string name="text_cardview_my_session_teacher_session_title">عنوان جلسه:</string>
+    <string name="text_cardview_my_session_teacher_lesson_title">عنوان درس:</string>
+    <string name="text_cardview_my_session_teacher_lesson_title_dash">-</string>
+    <string name="text_cardview_my_session_teacher_department_title">عنوان دپارتمان:</string>
+    <string name="text_cardview_my_session_teacher_name_teacher">مدرس:</string>
+    <string name="text_cardview_my_session_teacher_name_university">دانشگاه:</string>
+    <string name="text_cardview_my_session_teacher_goto_classonline">ورود به کلاس</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
 </resources>

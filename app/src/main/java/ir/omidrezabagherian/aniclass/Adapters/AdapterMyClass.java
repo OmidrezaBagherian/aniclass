@@ -51,17 +51,17 @@ public class AdapterMyClass extends RecyclerView.Adapter<AdapterMyClass.MyViewHo
         holder.buttonRemoveClassStudent.setOnClickListener(v -> removeClass());
     }
 
-    @Override
-    public int getItemCount() {
-        return lessonTitle.length;
-    }
-
     private void goDetail() {
         Toast.makeText(context, "وارد شد", Toast.LENGTH_SHORT).show();
     }
 
     private void removeClass() {
         Toast.makeText(context, "حذف شد", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public int getItemCount() {
+        return lessonTitle.length;
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
