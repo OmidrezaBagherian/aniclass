@@ -244,8 +244,9 @@
     <string name="text_cardview_my_session_teacher_name_teacher">مدرس:</string>
     <string name="text_cardview_my_session_teacher_name_university">دانشگاه:</string>
     <string name="text_cardview_my_session_teacher_goto_classonline">ورود به کلاس</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!-- text add session teacher -->
+    <string name="text_add_session_teacher_toolbar_title">اضافه کردن جلسه</string>
+    <string name="text_add_session_teacher_edittext_hint_session_name">نام جلسه</string>
 
 
 </resources>

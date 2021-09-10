@@ -76,6 +76,8 @@ public class ProfileTeacherFragment extends Fragment {
         fragmentTransaction.commit();
     }
 
+    //Todo: replace SettingTeacher -> AddSessionFragment
+
     private void setting() {
         FragmentTransaction fragmentTransaction = this.getFragmentManager().beginTransaction();
         Fragment fragment = new SettingTeacherFragment();
