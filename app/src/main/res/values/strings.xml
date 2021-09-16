@@ -247,6 +247,16 @@
     <!-- text add session teacher -->
     <string name="text_add_session_teacher_toolbar_title">اضافه کردن جلسه</string>
     <string name="text_add_session_teacher_edittext_hint_session_name">نام جلسه</string>
-
+    <string name="text_add_session_teacher_edittext_hint_session_date">تاریخ جلسه</string>
+    <string name="text_add_session_teacher_edittext_hint_session_ime">ساعت جلسه</string>
+    <!-- text dialog add session teacher -->
+    <string name="text_dialog_add_session_teacher_title">تاریخ جلسه</string>
+    <string name="text_dialog_add_session_teacher_autocomplete_hint_years_select">سال</string>
+    <string name="text_dialog_add_session_teacher_autocomplete_hint_month_select">ماه</string>
+    <string name="text_dialog_add_session_teacher_autocomplete_hint_day_select">روز</string>
+    <string name="text_dialog_add_session_teacher_button_apply">اعمال</string>
+    <string name="text_dialog_add_session_teacher_button_cancel">انصراف</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

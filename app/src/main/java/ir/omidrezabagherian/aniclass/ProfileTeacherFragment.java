@@ -80,7 +80,7 @@ public class ProfileTeacherFragment extends Fragment {
 
     private void setting() {
         FragmentTransaction fragmentTransaction = this.getFragmentManager().beginTransaction();
-        Fragment fragment = new SettingTeacherFragment();
+        Fragment fragment = new EditSessionFragment();
         fragmentTransaction.replace(R.id.framelayout_teacher, fragment);
         fragmentTransaction.commit();
     }

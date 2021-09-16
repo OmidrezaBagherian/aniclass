@@ -1,8 +1,6 @@
 package ir.omidrezabagherian.aniclass;
 
-import android.app.AlertDialog;
 import android.graphics.Color;
-import android.graphics.Typeface;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -23,17 +21,16 @@ import com.google.android.material.textfield.TextInputEditText;
 import ir.hamsaa.persiandatepicker.PersianDatePickerDialog;
 import ir.hamsaa.persiandatepicker.api.PersianPickerDate;
 import ir.hamsaa.persiandatepicker.api.PersianPickerListener;
-import ir.hamsaa.persiandatepicker.util.PersianCalendarConstants;
 import ir.hamsaa.persiandatepicker.util.PersianCalendarUtils;
 
-public class AddSessionFragment extends Fragment {
+public class EditSessionFragment extends Fragment {
 
-    private TextInputEditText textInputEditTextAddSessionName, textInputEditTextAddSessionDate;
+    private TextInputEditText textInputEditTextEditSessionName, textInputEditTextEditSessionDate;
     private ImageView imageViewAddSessionSetDate;
-    private PersianDatePickerDialog persianCalendarAddSession;
+    private PersianDatePickerDialog persianCalendarEditSession;
     private static final String TAG = "TeacherActivity";
     private AutoCompleteTextView autoCompleteTextViewSelectTime;
-    private Button buttonAddSessionApply;
+    private Button buttonEditSessionApply;
 
     private String sessionName, sessionDate, sessionTime;
 
@@ -60,20 +57,20 @@ public class AddSessionFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_add_session, container, false);
+        View view = inflater.inflate(R.layout.fragment_edit_session, container, false);
 
-        textInputEditTextAddSessionName = view.findViewById(R.id.textinput_edittext_dialog_add_session_session_name_text);
-        textInputEditTextAddSessionDate = view.findViewById(R.id.textinput_edittext_dialog_add_session_session_date_text);
-        imageViewAddSessionSetDate = view.findViewById(R.id.imageview_add_session_set_date);
-        autoCompleteTextViewSelectTime = view.findViewById(R.id.auto_complete_add_session_select_time);
-        buttonAddSessionApply = view.findViewById(R.id.button_add_session_apply);
+        textInputEditTextEditSessionName = view.findViewById(R.id.textinput_edittext_dialog_edit_session_session_name_text);
+        textInputEditTextEditSessionDate = view.findViewById(R.id.textinput_edittext_dialog_edit_session_session_date_text);
+        imageViewAddSessionSetDate = view.findViewById(R.id.imageview_edit_session_set_date);
+        autoCompleteTextViewSelectTime = view.findViewById(R.id.auto_complete_edit_session_select_time);
+        buttonEditSessionApply = view.findViewById(R.id.button_edit_session_apply);
 
-        imageViewAddSessionSetDate.setOnClickListener(v -> addDate());
+        imageViewAddSessionSetDate.setOnClickListener(v -> editDate());
 
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(getActivity(), R.layout.support_simple_spinner_dropdown_item, times);
         autoCompleteTextViewSelectTime.setAdapter(arrayAdapter);
 
-        sessionName = textInputEditTextAddSessionName.getText().toString();
+        sessionName = textInputEditTextEditSessionName.getText().toString();
 
         autoCompleteTextViewSelectTime.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -82,7 +79,7 @@ public class AddSessionFragment extends Fragment {
             }
         });
 
-        buttonAddSessionApply.setOnClickListener(new View.OnClickListener() {
+        buttonEditSessionApply.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getActivity(), sessionName + " - " + sessionDate + " - " + sessionTime, Toast.LENGTH_SHORT).show();
@@ -92,8 +89,8 @@ public class AddSessionFragment extends Fragment {
         return view;
     }
 
-    private void addDate() {
-        persianCalendarAddSession = new PersianDatePickerDialog(getActivity())
+    private void editDate() {
+        persianCalendarEditSession = new PersianDatePickerDialog(getActivity())
                 .setPositiveButtonString("باشه")
                 .setNegativeButton("بیخیال")
                 .setTodayButton("امروز")
@@ -113,7 +110,7 @@ public class AddSessionFragment extends Fragment {
                         Log.d(TAG, "onDateSelected: " + persianPickerDate.getPersianLongDate());// دوشنبه  13  خرداد  1370
                         Log.d(TAG, "onDateSelected: " + persianPickerDate.getPersianMonthName());//خرداد
                         Log.d(TAG, "onDateSelected: " + PersianCalendarUtils.isPersianLeapYear(persianPickerDate.getPersianYear()));//true
-                        textInputEditTextAddSessionDate.setText(persianPickerDate.getPersianYear() + "/" + persianPickerDate.getPersianMonth() + "/" + persianPickerDate.getPersianDay());
+                        textInputEditTextEditSessionDate.setText(persianPickerDate.getPersianYear() + "/" + persianPickerDate.getPersianMonth() + "/" + persianPickerDate.getPersianDay());
                         sessionDate = persianPickerDate.getPersianYear() + "/" + persianPickerDate.getPersianMonth() + "/" + persianPickerDate.getPersianDay();
                     }
 
@@ -123,7 +120,6 @@ public class AddSessionFragment extends Fragment {
                     }
                 });
 
-        persianCalendarAddSession.show();
+        persianCalendarEditSession.show();
     }
-
 }

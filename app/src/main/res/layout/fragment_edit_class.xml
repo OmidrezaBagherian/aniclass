@@ -19,27 +19,26 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:fontFamily="@font/iransans_bold"
-            android:text="@string/text_edit_class_teacher_toolbar_title"
+            android:text="@string/text_add_class_teacher_toolbar_title"
             android:textAlignment="center"
             android:textSize="18sp" />
 
     </androidx.cardview.widget.CardView>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginTop="56dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        app:layout_constraintTop_toTopOf="parent">
 
         <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            app:layout_constraintTop_toTopOf="parent">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -49,18 +48,18 @@
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/textinput_layout_edit_class_lesson_name"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    app:layout_constraintTop_toTopOf="parent">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/textinput_edittext_edit_class_lesson_name"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/iransans_regular"
-                        android:hint="@string/text_edit_class_teacher_edittext_hint_lesson_name"
+                        android:hint="@string/text_add_class_teacher_edittext_hint_lesson_name"
                         android:inputType="text"
                         android:textAlignment="center" />
 
@@ -69,19 +68,19 @@
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/textinput_layout_edit_class_university_name"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textinput_layout_edit_class_lesson_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp">
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textinput_layout_edit_class_lesson_name">
 
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/textinput_edittext_add_class_university_name"
+                        android:id="@+id/textinput_edittext_edit_class_university_name"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/iransans_regular"
-                        android:hint="@string/text_edit_class_teacher_edittext_hint_university_name"
+                        android:hint="@string/text_add_class_teacher_edittext_hint_university_name"
                         android:inputType="text"
                         android:textAlignment="center" />
 
@@ -90,19 +89,40 @@
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/textinput_layout_edit_class_department_name"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textinput_layout_edit_class_university_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp">
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textinput_layout_edit_class_university_name">
 
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/textinput_edittext_edit_class_lesson_name_class_department_name"
+                        android:id="@+id/textinput_edittext_edit_class_department_name"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/iransans_regular"
-                        android:hint="@string/text_edit_class_teacher_edittext_hint_department_name"
+                        android:hint="@string/text_add_class_teacher_edittext_hint_department_name"
+                        android:inputType="text"
+                        android:textAlignment="center" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textinput_layout_edit_class_department_link"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textinput_layout_edit_class_department_name">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/textinput_edittext_edit_class_department_link"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/iransans_regular"
+                        android:hint="لینک کلاس"
                         android:inputType="text"
                         android:textAlignment="center" />
 
@@ -111,47 +131,47 @@
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/textinput_layout_edit_class_about_class"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textinput_layout_edit_class_department_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp">
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textinput_layout_edit_class_department_link">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/textinput_edittext_edit_class_about_class"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/iransans_regular"
-                        android:hint="@string/text_edit_class_teacher_edittext_hint_class_about"
+                        android:hint="@string/text_add_class_teacher_edittext_hint_class_about"
                         android:inputType="textMultiLine"
-                        android:maxLines="6"
                         android:minLines="1"
-                        android:scrollbars="vertical"
-                        android:textAlignment="center" />
+                        android:maxLines="6"
+                        android:textAlignment="center"
+                        android:scrollbars="vertical" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <CheckBox
                     android:id="@+id/chackbox_edit_class_set_password_class"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textinput_layout_edit_class_about_class"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
                     android:layoutDirection="rtl"
-                    android:text="@string/text_edit_class_teacher_checkbox_set_password_text" />
+                    android:layout_marginTop="8dp"
+                    android:text="@string/text_add_class_teacher_checkbox_set_password_text"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textinput_layout_edit_class_about_class" />
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/textinput_layout_edit_class_password_class"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/chackbox_edit_class_set_password_class"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp">
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/chackbox_edit_class_set_password_class">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/textinput_edittext_edit_class_password_class"
@@ -159,22 +179,22 @@
                         android:layout_height="wrap_content"
                         android:enabled="false"
                         android:fontFamily="@font/iransans_regular"
-                        android:hint="@string/text_edit_class_teacher_edittext_hint_class_password"
+                        android:hint="@string/text_add_class_teacher_edittext_hint_class_password"
                         android:inputType="textPassword"
-                        android:scrollbars="vertical"
-                        android:textAlignment="center" />
+                        android:textAlignment="center"
+                        android:scrollbars="vertical" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/textinput_layout_edit_class_confirm_password_class"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textinput_layout_edit_class_password_class"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp">
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textinput_layout_edit_class_password_class">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/textinput_edittext_edit_class_confirm_password_class"
@@ -182,24 +202,24 @@
                         android:layout_height="wrap_content"
                         android:enabled="false"
                         android:fontFamily="@font/iransans_regular"
-                        android:hint="@string/text_edit_class_teacher_edittext_hint_class_confirm_password"
+                        android:hint="@string/text_add_class_teacher_edittext_hint_class_confirm_password"
                         android:inputType="textPassword"
-                        android:scrollbars="vertical"
-                        android:textAlignment="center" />
+                        android:textAlignment="center"
+                        android:scrollbars="vertical" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <Button
-                    android:id="@+id/button_add_class_edit_class"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textinput_layout_edit_class_confirm_password_class"
+                    android:id="@+id/button_edit_class_edit_class"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:layout_marginBottom="52dp"
-                    android:text="@string/text_edit_class_teacher_button_edit_class" />
+                    android:text="@string/text_add_class_teacher_button_add_class"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textinput_layout_edit_class_confirm_password_class" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 

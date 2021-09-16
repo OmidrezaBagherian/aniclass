@@ -17,14 +17,18 @@ import io.reactivex.rxjava3.disposables.CompositeDisposable;
 
 public class LoginActivity extends AppCompatActivity {
 
+    /**
+     * attributes login activity
+     */
     private TextInputEditText textInputEditTextLoginUsername, textInputEditTextLoginPassword;
     private TextView textViewLoginForgetPassword, textViewLoginSignUp;
     private Button buttonLoginLogin;
 
+    //username & password student
     String[] listStudent = {"1234567890", "123456"};
 
+    //username & password teacher
     String[] listTeacher = {"0987654321", "654321"};
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

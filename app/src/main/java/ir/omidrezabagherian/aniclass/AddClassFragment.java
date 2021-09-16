@@ -16,7 +16,7 @@ import com.google.android.material.textfield.TextInputEditText;
 
 public class AddClassFragment extends Fragment {
 
-    private TextInputEditText textInputEditTextAddClassLessonName, textInputEditTextAddClassUniversityName, textInputEditTextAddClassDepartmentName, textInputEditTextAddClassAboutClass, textInputEditTextAddClassPasswordClass, textInputEditTextAddClassConfirmPasswordClass;
+    private TextInputEditText textInputEditTextAddClassLessonName, textInputEditTextAddClassUniversityName, textInputEditTextAddClassDepartmentName, textInputEditTextAddClassLink, textInputEditTextAddClassAboutClass, textInputEditTextAddClassPasswordClass, textInputEditTextAddClassConfirmPasswordClass;
     private CheckBox checkBoxAddClassSetPasswordClass;
     private Button buttonAddClassAddClass;
     private boolean setPasswordAddClassIsChecked;
@@ -28,6 +28,7 @@ public class AddClassFragment extends Fragment {
         textInputEditTextAddClassLessonName = view.findViewById(R.id.textinput_edittext_add_class_lesson_name);
         textInputEditTextAddClassUniversityName = view.findViewById(R.id.textinput_edittext_add_class_university_name);
         textInputEditTextAddClassDepartmentName = view.findViewById(R.id.textinput_edittext_add_class_department_name);
+        textInputEditTextAddClassLink = view.findViewById(R.id.textinput_edittext_add_class_department_link);
         textInputEditTextAddClassAboutClass = view.findViewById(R.id.textinput_edittext_add_class_about_class);
         textInputEditTextAddClassPasswordClass = view.findViewById(R.id.textinput_edittext_add_class_password_class);
         textInputEditTextAddClassConfirmPasswordClass = view.findViewById(R.id.textinput_edittext_add_class_confirm_password_class);
