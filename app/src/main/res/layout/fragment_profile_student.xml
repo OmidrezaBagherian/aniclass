@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layoutDirection="ltr"
     android:layout_height="match_parent"
-    tools:context=".ProfileStudentFragment">
+    tools:context=".view.ProfileStudentFragment">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/toolbar_profile_student"

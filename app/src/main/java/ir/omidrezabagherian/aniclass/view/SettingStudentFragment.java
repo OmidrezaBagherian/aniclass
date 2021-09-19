@@ -1,4 +1,4 @@
-package ir.omidrezabagherian.aniclass;
+package ir.omidrezabagherian.aniclass.view;
 
 import android.app.AlertDialog;
 import android.os.Bundle;
@@ -14,6 +14,8 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputEditText;
+
+import ir.omidrezabagherian.aniclass.R;
 
 public class SettingStudentFragment extends Fragment {
 

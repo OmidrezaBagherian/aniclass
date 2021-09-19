@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layoutDirection="ltr"
-    tools:context=".StudentActivity">
+    tools:context=".view.StudentActivity">
 
     <FrameLayout
         android:id="@+id/framelayout_student"

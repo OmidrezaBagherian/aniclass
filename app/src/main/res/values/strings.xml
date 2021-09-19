@@ -6,13 +6,13 @@
     <string name="text_login_textview_about">سامانه هوشمند مدیریت کلاس آنلاین</string>
     <!-- texts login page -->
     <string name="text_login_toolbar_title">ورود</string>
-    <string name="text_login_edittext_hint_username">کدملی</string>
+    <string name="text_login_edittext_hint_username">نام کاربری (کدملی)</string>
     <string name="text_login_edittext_hint_password">رمز عبور</string>
     <string name="text_login_textview_forget_password">رمز عبور را فراموش کردم</string>
     <string name="text_login_button_login">ورود به سامانه</string>
     <string name="text_login_textview_or">یا</string>
     <string name="text_login_textview_signup">ثبت نام</string>
-    <string name="text_login_toast_is_empty">لطفاً فیلد های موجود را کنید</string>
+    <string name="text_login_toast_is_empty">لطفاً فیلد های نام کاربری یا رمزعبور پر را کنید</string>
     <string name="text_login_toast_signup">این کدملی ثبت نام نکرده اید</string>
     <!-- text signup page -->
     <string name="text_signup_toolbar_title">ثبت نام</string>
@@ -55,35 +55,16 @@
     <string name="text_menu_student_my_homework">تکلیف های من</string>
     <string name="text_menu_student_my_classes">کلاس های من</string>
     <string name="text_menu_student_my_search">جستجو</string>
-    <!-- text menu teacher -->
-    <string name="text_menu_teacher_my_profile">پروفایل من</string>
-    <string name="text_menu_teacher_management_homework">مدیریت تکالیف</string>
-    <string name="text_menu_teacher_management_classes">مدیریت کلاس ها</string>
     <!-- text profile student -->
     <string name="text_profile_student_toolbar_title">پروفایل من</string>
-    <string name="text_profile_student_textview_name_and_family">امیدرضا باقریان اسفندانی</string>
-    <string name="text_profile_student_textview_email">Omidreza@gmail.com</string>
     <string name="text_profile_student_textview_search_class">جستجوی کلاس</string>
     <string name="text_profile_student_textview_my_classes">کلاس های من</string>
     <string name="text_profile_student_textview_my_sessions">تکلیف های من</string>
     <string name="text_profile_student_textview_setting">تنظیمات</string>
     <string name="text_profile_student_textview_exit">خروج</string>
-    <!-- text profile teacher -->
-    <string name="text_profile_teacher_toolbar_title">پروفایل من</string>
-    <string name="text_profile_teacher_textview_name_and_family">قاسم باقریان اسفندانی</string>
-    <string name="text_profile_teacher_textview_email">Ghasem@gmail.com</string>
-    <string name="text_profile_teacher_textview_management_class">مدیریت کلاس ها</string>
-    <string name="text_profile_teacher_textview_management_homework">مدیریت تکالیف</string>
-    <string name="text_profile_teacher_textview_management_university">مدیریت دانشگاه ها</string>
-    <string name="text_profile_teacher_textview_management_department">مدیریت دپارتمان ها</string>
-    <string name="text_profile_teacher_textview_setting">تنظیمات</string>
-    <string name="text_profile_teacher_textview_exit">خروج</string>
     <!-- text homework student -->
     <string name="text_homework_student_toolbar_title">تکلیف های من</string>
     <string name="text_homework_student_textview_coming_soon">بزودی</string>
-    <!-- text homework teacher -->
-    <string name="text_management_homework_teacher_toolbar_title">مدیریت تکلیف ها</string>
-    <string name="text_management_homework_teacher_textview_coming_soon">بزودی</string>
     <!-- text search class student -->
     <string name="text_search_class_student_edittext_hint_search">جستجو کنید</string>
     <!-- text cardview class search student -->
@@ -127,55 +108,37 @@
     <string name="text_cardview_my_class_student_name_university">دانشگاه:</string>
     <string name="text_cardview_my_class_student_show_detail">نمایش جزئیات</string>
     <string name="text_cardview_my_class_student_remove_class">حذف کردن کلاس</string>
-    <!-- text setting student -->
-    <string name="text_setting_toolbar_title">تنظیمات</string>
-    <string name="text_setting_edittext_hint_name">نام</string>
-    <string name="text_setting_edittext_hint_family">نام خانوادگی</string>
-    <string name="text_setting_edittext_hint_email">ایمیل</string>
-    <string name="text_setting_edittext_hint_nationalcode">کدملی</string>
-    <string name="text_setting_edittext_hint_password">رمز عبور</string>
-    <string name="text_setting_edittext_hint_access_department">دسترسی دپارتمان</string>
-    <string name="text_setting_edittext_hint_access_university">دسترسی دانشگاه</string>
-    <string name="text_setting_button_send_edit">تغییرات</string>
-    <!-- text dialog setting name -->
-    <string name="text_dialog_setting_name_title">تغییر نام</string>
-    <string name="text_dialog_setting_name_edittext_hint_class_code">نام جدید</string>
-    <string name="text_dialog_setting_name_button_apply">اعمال</string>
-    <string name="text_dialog_setting_name_button_cancel">انصراف</string>
-    <string name="text_toast_setting_name_is_empty">نام خود را درست وارد کنید</string>
-    <!-- text dialog setting family -->
-    <string name="text_dialog_setting_family_title">تغییر نام خانوادگی</string>
-    <string name="text_dialog_setting_family_edittext_hint_class_code">نام خانوادگی جدید</string>
-    <string name="text_dialog_setting_family_button_apply">اعمال</string>
-    <string name="text_dialog_setting_family_button_cancel">انصراف</string>
-    <string name="text_toast_setting_family_is_empty">نام خانوادگی خود را درست وارد کنید</string>
-    <!-- text dialog setting email -->
-    <string name="text_dialog_setting_email_title">تغییر ایمیل</string>
-    <string name="text_dialog_setting_email_edittext_hint_new_email">ایمیل جدید</string>
-    <string name="text_dialog_setting_email_edittext_hint_confirm_new_email">تکرار ایمیل جدید</string>
-    <string name="text_dialog_setting_email_button_apply">اعمال</string>
-    <string name="text_dialog_setting_email_button_cancel">انصراف</string>
-    <string name="text_toast_setting_new_email_is_empty">ایمیل خود را درست وارد کنید</string>
-    <string name="text_toast_setting_new_email_is_check">ایمیل جدید با تکرارش یکسان نیست</string>
-    <!-- text dialog setting nationalcode -->
-    <string name="text_dialog_setting_nationalcode_title">تغییر کدملی</string>
-    <string name="text_dialog_setting_nationalcode_edittext_hint_class_code">کدملی جدید</string>
-    <string name="text_dialog_setting_nationalcode_button_apply">اعمال</string>
-    <string name="text_dialog_setting_nationalcode_button_cancel">انصراف</string>
-    <string name="text_toast_setting_nationalcode_is_empty">کدملی خود را درست وارد کنید</string>
-    <!-- text dialog setting password -->
-    <string name="text_dialog_setting_password_title">تغییر رمز عبور</string>
-    <string name="text_dialog_setting_password_edittext_hint_new_password">رمز عبور جدید</string>
-    <string name="text_dialog_setting_password_edittext_hint_confirm_new_password">تکرار رمز عبور جدید</string>
-    <string name="text_dialog_setting_password_button_apply">اعمال</string>
-    <string name="text_dialog_setting_password_button_cancel">انصراف</string>
-    <string name="text_toast_setting_new_password_is_empty">رمز عبور خود را درست وارد کنید</string>
-    <string name="text_toast_setting_new_password_is_check">رمز عبور جدید با تکرارش یکسان نیست</string>
-    <!-- text department teacher -->
+    <!-- text my session student -->
+    <string name="text_my_session_student_toolbar_title">جلسات کلاس</string>
+    <!-- text cardview my session student -->
+    <string name="text_cardview_my_session_student_session_title">عنوان جلسه:</string>
+    <string name="text_cardview_my_session_student_lesson_title">عنوان درس:</string>
+    <string name="text_cardview_my_session_student_lesson_title_dash">-</string>
+    <string name="text_cardview_my_session_student_department_title">عنوان دپارتمان:</string>
+    <string name="text_cardview_my_session_student_name_teacher">مدرس:</string>
+    <string name="text_cardview_my_session_student_name_university">دانشگاه:</string>
+    <string name="text_cardview_my_session_student_goto_classonline">ورود به کلاس</string>
+
+    <!-- text menu teacher -->
+    <string name="text_menu_teacher_my_profile">پروفایل من</string>
+    <string name="text_menu_teacher_management_homework">مدیریت تکالیف</string>
+    <string name="text_menu_teacher_management_classes">مدیریت کلاس ها</string>
+    <!-- text profile teacher -->
+    <string name="text_profile_teacher_toolbar_title">پروفایل من</string>
+    <string name="text_profile_teacher_textview_management_class">مدیریت کلاس ها</string>
+    <string name="text_profile_teacher_textview_management_homework">مدیریت تکالیف</string>
+    <string name="text_profile_teacher_textview_management_university">مدیریت دانشگاه ها</string>
+    <string name="text_profile_teacher_textview_management_department">مدیریت دپارتمان ها</string>
+    <string name="text_profile_teacher_textview_setting">تنظیمات</string>
+    <string name="text_profile_teacher_textview_exit">خروج</string>
+    <!-- text management homework teacher -->
+    <string name="text_management_homework_teacher_toolbar_title">مدیریت تکلیف ها</string>
+    <string name="text_management_homework_teacher_textview_coming_soon">بزودی</string>
+    <!-- text university teacher -->
     <string name="text_university_teacher_toolbar_title">دانشگاه های من</string>
-    <!-- text dialog department teacher -->
+    <!-- text dialog university teacher -->
     <string name="text_dialog_add_university_textview_title_university">نام دانشگاه:</string>
-    <!-- text dialog department teacher -->
+    <!-- text dialog university teacher -->
     <string name="text_dialog_add_university_title">اضافه کردن دانشگاه</string>
     <string name="text_dialog_add_university_edittext_hint_university_code">کد ثبت نام دانشگاه</string>
     <string name="text_dialog_add_university_button_apply">بررسی کد</string>
@@ -234,29 +197,56 @@
     <string name="text_cardview_management_session_teacher_name_university">دانشگاه:</string>
     <string name="text_cardview_management_session_teacher_edit_session">ویرایش</string>
     <string name="text_cardview_management_session_teacher_remove_session">حذف</string>
-    <!-- text my session teacher -->
-    <string name="text_my_session_teacher_toolbar_title">جلسات کلاس</string>
-    <!-- text cardview my session teacher -->
-    <string name="text_cardview_my_session_teacher_session_title">عنوان جلسه:</string>
-    <string name="text_cardview_my_session_teacher_lesson_title">عنوان درس:</string>
-    <string name="text_cardview_my_session_teacher_lesson_title_dash">-</string>
-    <string name="text_cardview_my_session_teacher_department_title">عنوان دپارتمان:</string>
-    <string name="text_cardview_my_session_teacher_name_teacher">مدرس:</string>
-    <string name="text_cardview_my_session_teacher_name_university">دانشگاه:</string>
-    <string name="text_cardview_my_session_teacher_goto_classonline">ورود به کلاس</string>
     <!-- text add session teacher -->
     <string name="text_add_session_teacher_toolbar_title">اضافه کردن جلسه</string>
     <string name="text_add_session_teacher_edittext_hint_session_name">نام جلسه</string>
     <string name="text_add_session_teacher_edittext_hint_session_date">تاریخ جلسه</string>
     <string name="text_add_session_teacher_edittext_hint_session_ime">ساعت جلسه</string>
     <!-- text dialog add session teacher -->
-    <string name="text_dialog_add_session_teacher_title">تاریخ جلسه</string>
-    <string name="text_dialog_add_session_teacher_autocomplete_hint_years_select">سال</string>
-    <string name="text_dialog_add_session_teacher_autocomplete_hint_month_select">ماه</string>
-    <string name="text_dialog_add_session_teacher_autocomplete_hint_day_select">روز</string>
-    <string name="text_dialog_add_session_teacher_button_apply">اعمال</string>
-    <string name="text_dialog_add_session_teacher_button_cancel">انصراف</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="text_dialog_add_session_set_positive">اعمال</string>
+    <string name="text_dialog_add_session_set_negative">انصراف</string>
+    <string name="text_dialog_add_session_set_today">امروز</string>
 
+    <!-- text setting student -->
+    <string name="text_setting_toolbar_title">تنظیمات</string>
+    <string name="text_setting_edittext_hint_name">نام</string>
+    <string name="text_setting_edittext_hint_family">نام خانوادگی</string>
+    <string name="text_setting_edittext_hint_email">ایمیل</string>
+    <string name="text_setting_edittext_hint_nationalcode">کدملی</string>
+    <string name="text_setting_edittext_hint_password">رمز عبور</string>
+    <string name="text_setting_button_send_edit">تغییرات</string>
+    <!-- text dialog setting name -->
+    <string name="text_dialog_setting_name_title">تغییر نام</string>
+    <string name="text_dialog_setting_name_edittext_hint_class_code">نام جدید</string>
+    <string name="text_dialog_setting_name_button_apply">اعمال</string>
+    <string name="text_dialog_setting_name_button_cancel">انصراف</string>
+    <string name="text_toast_setting_name_is_empty">نام خود را درست وارد کنید</string>
+    <!-- text dialog setting family -->
+    <string name="text_dialog_setting_family_title">تغییر نام خانوادگی</string>
+    <string name="text_dialog_setting_family_edittext_hint_class_code">نام خانوادگی جدید</string>
+    <string name="text_dialog_setting_family_button_apply">اعمال</string>
+    <string name="text_dialog_setting_family_button_cancel">انصراف</string>
+    <string name="text_toast_setting_family_is_empty">نام خانوادگی خود را درست وارد کنید</string>
+    <!-- text dialog setting email -->
+    <string name="text_dialog_setting_email_title">تغییر ایمیل</string>
+    <string name="text_dialog_setting_email_edittext_hint_new_email">ایمیل جدید</string>
+    <string name="text_dialog_setting_email_edittext_hint_confirm_new_email">تکرار ایمیل جدید</string>
+    <string name="text_dialog_setting_email_button_apply">اعمال</string>
+    <string name="text_dialog_setting_email_button_cancel">انصراف</string>
+    <string name="text_toast_setting_new_email_is_empty">ایمیل خود را درست وارد کنید</string>
+    <string name="text_toast_setting_new_email_is_check">ایمیل جدید با تکرارش یکسان نیست</string>
+    <!-- text dialog setting nationalcode -->
+    <string name="text_dialog_setting_nationalcode_title">تغییر کدملی</string>
+    <string name="text_dialog_setting_nationalcode_edittext_hint_class_code">کدملی جدید</string>
+    <string name="text_dialog_setting_nationalcode_button_apply">اعمال</string>
+    <string name="text_dialog_setting_nationalcode_button_cancel">انصراف</string>
+    <string name="text_toast_setting_nationalcode_is_empty">کدملی خود را درست وارد کنید</string>
+    <!-- text dialog setting password -->
+    <string name="text_dialog_setting_password_title">تغییر رمز عبور</string>
+    <string name="text_dialog_setting_password_edittext_hint_new_password">رمز عبور جدید</string>
+    <string name="text_dialog_setting_password_edittext_hint_confirm_new_password">تکرار رمز عبور جدید</string>
+    <string name="text_dialog_setting_password_button_apply">اعمال</string>
+    <string name="text_dialog_setting_password_button_cancel">انصراف</string>
+    <string name="text_toast_setting_new_password_is_empty">رمز عبور خود را درست وارد کنید</string>
+    <string name="text_toast_setting_new_password_is_check">رمز عبور جدید با تکرارش یکسان نیست</string>
 </resources>

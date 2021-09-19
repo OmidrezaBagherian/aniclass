@@ -10,22 +10,22 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AniClass">
         <activity
-            android:name=".TeacherActivity"
+            android:name=".view.TeacherActivity"
             android:exported="true" />
         <activity
-            android:name=".StudentActivity"
+            android:name=".view.StudentActivity"
             android:exported="true" />
         <activity
-            android:name=".ForgetActivity"
+            android:name=".view.ForgetActivity"
             android:exported="true" />
         <activity
-            android:name=".SignUpActivity"
+            android:name=".view.SignUpActivity"
             android:exported="true" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".view.LoginActivity"
             android:exported="true" />
         <activity
-            android:name=".SplashActivity"
+            android:name=".view.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

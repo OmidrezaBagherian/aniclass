@@ -1,4 +1,4 @@
-package ir.omidrezabagherian.aniclass;
+package ir.omidrezabagherian.aniclass.view;
 
 import android.os.Bundle;
 
@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import ir.omidrezabagherian.aniclass.Adapters.AdapterMyClass;
+import ir.omidrezabagherian.aniclass.R;
 
 public class MyClassFragment extends Fragment {
 

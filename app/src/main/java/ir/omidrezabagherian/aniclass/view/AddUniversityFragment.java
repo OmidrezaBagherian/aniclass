@@ -1,4 +1,4 @@
-package ir.omidrezabagherian.aniclass;
+package ir.omidrezabagherian.aniclass.view;
 
 import android.app.AlertDialog;
 import android.os.Bundle;
@@ -17,6 +17,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.textfield.TextInputEditText;
 
 import ir.omidrezabagherian.aniclass.Adapters.AdapterMyUniversity;
+import ir.omidrezabagherian.aniclass.R;
 
 public class AddUniversityFragment extends Fragment {
 

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layoutDirection="ltr"
-    tools:context=".SearchClassFragment">
+    tools:context=".view.SearchClassFragment">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/toolbar_search_class_student"

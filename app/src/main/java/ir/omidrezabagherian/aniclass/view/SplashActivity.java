@@ -1,10 +1,12 @@
-package ir.omidrezabagherian.aniclass;
+package ir.omidrezabagherian.aniclass.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+
+import ir.omidrezabagherian.aniclass.R;
 
 public class SplashActivity extends AppCompatActivity {
 

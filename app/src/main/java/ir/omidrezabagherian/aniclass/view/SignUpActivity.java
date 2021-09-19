@@ -1,18 +1,18 @@
-package ir.omidrezabagherian.aniclass;
+package ir.omidrezabagherian.aniclass.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputEditText;
 
+import ir.omidrezabagherian.aniclass.R;
+
 public class SignUpActivity extends AppCompatActivity {
 
-    private Toolbar toolbarSignUp;
     private TextInputEditText textInputEditTextSignUpName, textInputEditTextSignUpFamily, textInputEditTextSignUpNationalCode, textInputEditTextSignUpEmail, textInputEditTextSignUpPassword, textInputEditTextSignUpConfirmPassword, textInputEditTextSignUpSecurityQuest, textInputEditTextSignUpSignUpTeacherCode;
     private Button buttonSignUp;
 

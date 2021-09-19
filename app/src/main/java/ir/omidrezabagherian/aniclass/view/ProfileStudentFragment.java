@@ -1,18 +1,18 @@
-package ir.omidrezabagherian.aniclass;
+package ir.omidrezabagherian.aniclass.view;
 
 import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import ir.omidrezabagherian.aniclass.R;
 
 public class ProfileStudentFragment extends Fragment {
 
@@ -31,8 +31,8 @@ public class ProfileStudentFragment extends Fragment {
         cardViewProfileStudentSetting = view.findViewById(R.id.cardview_profile_student_setting);
         cardViewProfileStudentExitAccount = view.findViewById(R.id.cardview_profile_student_exit);
 
-        textViewProfileStudentName.setText(R.string.text_profile_student_textview_name_and_family);
-        textViewProfileStudentEmail.setText(R.string.text_profile_student_textview_email);
+        textViewProfileStudentName.setText("امیدرضا باقریان اسفندانی");
+        textViewProfileStudentEmail.setText("Omidreza@gmail.com");
 
         cardViewProfileStudentSearchClass.setOnClickListener(v -> searchClass());
 

@@ -1,4 +1,4 @@
-package ir.omidrezabagherian.aniclass;
+package ir.omidrezabagherian.aniclass.view;
 
 import android.os.Bundle;
 
@@ -14,6 +14,7 @@ import android.view.ViewGroup;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import ir.omidrezabagherian.aniclass.Adapters.AdapterManagementClass;
+import ir.omidrezabagherian.aniclass.R;
 
 public class ManagementClassFragment extends Fragment {
 

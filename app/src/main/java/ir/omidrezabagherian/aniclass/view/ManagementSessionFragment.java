@@ -1,4 +1,4 @@
-package ir.omidrezabagherian.aniclass;
+package ir.omidrezabagherian.aniclass.view;
 
 import android.os.Bundle;
 
@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 
 import ir.omidrezabagherian.aniclass.Adapters.AdapterManagementClass;
 import ir.omidrezabagherian.aniclass.Adapters.AdapterManagementSession;
+import ir.omidrezabagherian.aniclass.R;
 
 public class ManagementSessionFragment extends Fragment {
 

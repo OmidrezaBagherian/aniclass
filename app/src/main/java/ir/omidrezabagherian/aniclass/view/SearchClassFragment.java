@@ -1,6 +1,5 @@
-package ir.omidrezabagherian.aniclass;
+package ir.omidrezabagherian.aniclass.view;
 
-import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -17,6 +16,7 @@ import android.widget.Toast;
 import com.google.android.material.textfield.TextInputEditText;
 
 import ir.omidrezabagherian.aniclass.Adapters.AdapterSearchClass;
+import ir.omidrezabagherian.aniclass.R;
 
 public class SearchClassFragment extends Fragment {
 

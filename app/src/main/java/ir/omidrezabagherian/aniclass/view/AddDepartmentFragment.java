@@ -1,4 +1,4 @@
-package ir.omidrezabagherian.aniclass;
+package ir.omidrezabagherian.aniclass.view;
 
 import android.app.AlertDialog;
 import android.os.Bundle;
@@ -20,6 +20,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.textfield.TextInputEditText;
 
 import ir.omidrezabagherian.aniclass.Adapters.AdapterMyDepartment;
+import ir.omidrezabagherian.aniclass.R;
 
 public class AddDepartmentFragment extends Fragment {
 
@@ -44,7 +45,7 @@ public class AddDepartmentFragment extends Fragment {
             "دانشگاه فنی حرفه ای انقلاب اسلامی تهران"
     };
 
-    String[] universities = {
+    String[] universitiesList = {
             "دانشگاه فنی حرفه ای شهید بهشتی کرج",
             "دانشگاه فنی حرفه ای شهدای 17 شهریور کرج",
             "دانشگاه فنی حرفه ای شمسی پور تهران",
@@ -81,13 +82,13 @@ public class AddDepartmentFragment extends Fragment {
         AlertDialog dialogAddDepartment = dialogBuilder.create();
         dialogAddDepartment.show();
 
-        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(getActivity(), R.layout.support_simple_spinner_dropdown_item, universities);
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(getActivity(), R.layout.support_simple_spinner_dropdown_item, universitiesList);
         autoCompleteTextViewSelectUniversity.setAdapter(arrayAdapter);
 
         autoCompleteTextViewSelectUniversity.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                selectUniversity = universities[position];
+                selectUniversity = universitiesList[position];
             }
         });
 

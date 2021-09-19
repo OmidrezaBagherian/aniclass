@@ -1,4 +1,4 @@
-package ir.omidrezabagherian.aniclass;
+package ir.omidrezabagherian.aniclass.view;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,6 +11,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import ir.omidrezabagherian.aniclass.R;
 
 public class ProfileTeacherFragment extends Fragment {
 
@@ -30,8 +32,8 @@ public class ProfileTeacherFragment extends Fragment {
         cardViewProfileTeacherSetting = view.findViewById(R.id.cardview_profile_teacher_setting);
         cardViewProfileTeacherExitAccount = view.findViewById(R.id.cardview_profile_teacher_exit);
 
-        textViewProfileTeacherName.setText(R.string.text_profile_teacher_textview_name_and_family);
-        textViewProfileTeacherEmail.setText(R.string.text_profile_teacher_textview_email);
+        textViewProfileTeacherName.setText("مسعود ترابی");
+        textViewProfileTeacherEmail.setText("MasoudTorabi@gmail.com");
 
         cardViewProfileTeacherManagementClass.setOnClickListener(v -> managementClass());
 
@@ -76,11 +78,9 @@ public class ProfileTeacherFragment extends Fragment {
         fragmentTransaction.commit();
     }
 
-    //Todo: replace SettingTeacher -> AddSessionFragment
-
     private void setting() {
         FragmentTransaction fragmentTransaction = this.getFragmentManager().beginTransaction();
-        Fragment fragment = new EditSessionFragment();
+        Fragment fragment = new SettingTeacherFragment();
         fragmentTransaction.replace(R.id.framelayout_teacher, fragment);
         fragmentTransaction.commit();
     }

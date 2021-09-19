@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layoutDirection="ltr"
-    tools:context=".ManagementHomeworkFragment">
+    tools:context=".view.ManagementHomeworkFragment">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/toolbar_homework_student"

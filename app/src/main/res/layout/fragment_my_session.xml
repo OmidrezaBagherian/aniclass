@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MySessionFragment">
+    tools:context=".view.MySessionFragment">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/toolbar_my_session_teacher"
@@ -19,7 +19,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:fontFamily="@font/iransans_bold"
-            android:text="@string/text_my_session_teacher_toolbar_title"
+            android:text="@string/text_my_session_student_toolbar_title"
             android:textAlignment="center"
             android:textSize="18sp" />
 
